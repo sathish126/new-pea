@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => (
-  <div className="sticky top-0 z-50 bg-white border-t-2 border-green-600 border-b-2">
+  <div className="sticky top-0 z-50 bg-white border-t-2 border-green-400 border-b-2">
     <nav className="py-2">
       <div className="container mx-auto flex justify-between px-6">
         <div className="flex space-x-12">

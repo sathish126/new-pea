@@ -2,14 +2,14 @@
 import React from "react";
 
 const Header = () => (
-  <div className="bg-white border-b-2 border-green-600 border-t-2">
+  <div className="bg-white border-b-2 border-green-400 border-t-2">
     <div className="container mx-auto flex items-center justify-between py-4 px-6">
       {/* Left Section */}
       <div className="flex items-center space-x-2 ">
         <img src="/assets/psg_logo.png" alt="Logo 1" className="w-12 h-12" />
         <div className="flex flex-col">
           <span className="text-lg font-semibold">Department of Production Engineering</span>
-          <span className="text-lg font-semibold">PSG College Of Technology</span>
+          <span className="text-lg font-semibold">PSG College of Technology</span>
         </div>
       </div>
 
