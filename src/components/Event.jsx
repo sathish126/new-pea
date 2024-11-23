@@ -7,28 +7,28 @@ const Event = () => {
     {
       title: "Artificial Intelligance",
       description: "Early Bird Offer valid till 17th November. Register Now!",
-      imageUrl: "src/assets/sample.webp", // Image URL for this event
+      imageUrl: "/assets/sample.webp", // Image URL for this event
       buttonText1: "Explore",
       buttonText2: "Register"
     },
     {
       title: "Blockchain Technology",
       description: "Join us for an in-depth discussion on the future of Blockchain. Register Today!",
-      imageUrl: "src/assets/sample.webp", // Another image URL for this event
+      imageUrl: "/assets/sample.webp", // Another image URL for this event
       buttonText1: "Explore",
       buttonText2: "Register"
     },
     {
       title: "Virtual Reality Expo",
       description: "Experience the latest in VR tech. Early access available till 20th November.",
-      imageUrl: "src/assets/sample.webp", // Another image URL for this event
+      imageUrl: "/assets/sample.webp", // Another image URL for this event
       buttonText1: "Explore",
       buttonText2: "Register"
     },
     {
       title: "Cybersecurity Essentials",
-      description: "Learn the key aspects of Cybersecurity with industry experts. Limited seats!",
-      imageUrl: "src/assets/sample.webp", // Another image URL for this event
+      description: "Experience the latest in VR tech. Early access available till 20th November.",
+      imageUrl: "/assets/sample.webp", // Another image URL for this event
       buttonText1: "Explore",
       buttonText2: "Register"
     }
