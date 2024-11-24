@@ -1,38 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import EventCard from "./EventCard"; // Import the EventCard component
 
 const Event = () => {
-  // Array of events with their respective details
+  // Array of events with Google Form URLs for registration
   const events = [
     {
-      title: "Artificial Intelligance",
+      title: "Artificial Intelligence",
       description: "Early Bird Offer valid till 17th November. Register Now!",
-      imageUrl: "/assets/sample.webp", // Image URL for this event
+      imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
-      buttonText2: "Register"
+      buttonText2: "Register",
+      googleFormUrl: "https://forms.gle/example1" // Google Form URL for this event
     },
     {
       title: "Blockchain Technology",
       description: "Join us for an in-depth discussion on the future of Blockchain. Register Today!",
-      imageUrl: "/assets/sample.webp", // Another image URL for this event
+      imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
-      buttonText2: "Register"
+      buttonText2: "Register",
+      googleFormUrl: "https://forms.gle/example2" // Google Form URL for this event
     },
     {
       title: "Virtual Reality Expo",
       description: "Experience the latest in VR tech. Early access available till 20th November.",
-      imageUrl: "/assets/sample.webp", // Another image URL for this event
+      imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
-      buttonText2: "Register"
+      buttonText2: "Register",
+      googleFormUrl: "https://forms.gle/example3" // Google Form URL for this event
     },
     {
       title: "Cybersecurity Essentials",
       description: "Experience the latest in VR tech. Early access available till 20th November.",
-      imageUrl: "/assets/sample.webp", // Another image URL for this event
+      imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
-      buttonText2: "Register"
+      buttonText2: "Register",
+      googleFormUrl: "https://forms.gle/example4" // Google Form URL for this event
     }
   ];
+
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
+
+  const toggleDescription = (index) => {
+    setActiveCardIndex(activeCardIndex === index ? null : index);
+  };
 
   return (
     <div className="bg-gradient-to-b from-white to-purple-400 min-h-screen p-5">
@@ -47,9 +57,12 @@ const Event = () => {
             key={index}
             title={event.title}
             description={event.description}
-            imageUrl={event.imageUrl} // Dynamic image URL passed as prop
+            imageUrl={event.imageUrl}
             buttonText1={event.buttonText1}
             buttonText2={event.buttonText2}
+            googleFormUrl={event.googleFormUrl} // Pass the Google Form URL as a prop
+            showDescription={activeCardIndex === index}
+            toggleDescription={() => toggleDescription(index)}
           />
         ))}
       </div>

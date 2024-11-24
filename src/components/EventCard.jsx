@@ -1,21 +1,38 @@
 import React from "react";
 
-const EventCard = ({ title, description, imageUrl, buttonText1, buttonText2 }) => {
+const EventCard = ({ title, description, imageUrl, buttonText1, buttonText2, showDescription, toggleDescription, googleFormUrl }) => {
+  const handleRegisterClick = () => {
+    // Redirect to Google Form
+    window.location.href = googleFormUrl;
+  };
+
   return (
-    <div className="max-w-sm w-full p-5 bg-transparent rounded-lg border border-white/10 shadow-md backdrop-blur-md flex flex-col items-center justify-center text-center">
-      <div
-        className="w-full h-72 rounded-lg bg-cover bg-center border border-white/25"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      ></div>
-      <h1 className="mt-6 text-white text-3xl font-extrabold">{title}</h1>
-      <p className="mt-4 text-white text-sm leading-relaxed tracking-wider">{description}</p>
-      <div className="mt-6 flex space-x-3">
-        <button className="px-6 py-3 border-2 border-white text-white rounded-full  hover:text-green-600 hover:border-green-600 transition duration-300 ease-in-out">
-          {buttonText1}
-        </button>
-        <button className="px-6 py-3 bg-green-600 text-white rounded-full hover:bg-white hover:text-green-600 transition duration-300 ease-in-out">
-          {buttonText2}
-        </button>
+    <div className="relative bg-transparent border border-gray-300 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+      {/* Image */}
+      <img src={imageUrl} alt={title} className="w-full h-88 object-cover opacity-70 hover:opacity-100 transition-opacity duration-300" />
+
+      {/* Event Title and Description */}
+      <div className="p-5 absolute inset-0 flex flex-col justify-between items-center bg-gradient-to-t from-black via-transparent to-transparent bg-opacity-60 rounded-xl">
+        <h3 className="text-xl font-semibold text-white text-center">{title}</h3>
+        
+        {/* Show description if showDescription is true */}
+        {showDescription && <p className="mt-2 text-gray-200 text-center">{description}</p>}
+
+        {/* Buttons */}
+        <div className="flex justify-between mt-4 w-full">
+          <button
+            onClick={toggleDescription}
+            className="px-4 py-2 text-white rounded-lg  transition-colors duration-300"
+          >
+            {buttonText1}
+          </button>
+          <button
+            onClick={handleRegisterClick} // Handle register button click
+            className="px-4 py-2  text-white rounded-lg  transition-colors duration-300"
+          >
+            {buttonText2}
+          </button>
+        </div>
       </div>
     </div>
   );

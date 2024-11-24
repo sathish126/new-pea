@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
+
 const Footer = () => (
   <footer className="bg-white border-t-2 border-green-400 sticky bottom-0 z-50">
     <div className="container mx-auto flex justify-between items-center px-6 py-2">
