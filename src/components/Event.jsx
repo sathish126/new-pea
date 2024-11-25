@@ -30,7 +30,7 @@ const Event = () => {
     },
     {
       title: "Cybersecurity Essentials",
-      description: "Experience the latest in VR tech. Early access available till 20th November.",
+      description: "Learn the essentials of cybersecurity and protect your data. Register Now!",
       imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
       buttonText2: "Register",
@@ -45,13 +45,14 @@ const Event = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-purple-400 min-h-screen p-5">
+    <div className="bg-gradient-to-b from-white to-purple-400 min-h-screen p-6 md:p-8 lg:p-10">
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-center mb-5 text-gray-800">Events</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-800">
+        Events
+      </h1>
 
       {/* Event Cards Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {/* Map through the events array and pass data to each EventCard */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {events.map((event, index) => (
           <EventCard
             key={index}

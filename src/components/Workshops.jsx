@@ -45,13 +45,14 @@ const Workshops = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-blue-400 min-h-screen p-5">
+    <div className="bg-gradient-to-b from-white to-blue-400 min-h-screen p-6 md:p-8 lg:p-10">
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-center mb-5 text-gray-800">Workshops</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-800">
+        Workshops
+      </h1>
 
       {/* Workshops Cards Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {/* Map through the workshops array and pass data to each WorkshopsCard */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {workshops.map((workshop, index) => (
           <WorkshopsCard
             key={index}
