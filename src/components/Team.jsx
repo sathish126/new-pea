@@ -95,7 +95,7 @@ const Team = () => {
     const groupedMembers = groupByRole(filterMembers(combinedMembers));
 
     return (
-        <section id="team" className="py-16 bg-gradient-to-b from-white to-indigo-100">
+        <section id="team" className="py-16 bg-black">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">

@@ -3,7 +3,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        minecraft: ['MinecraftPE', 'sans-serif'], // Custom font name
+        unblessed: ['unblessed', 'sans-serif'],
+        minecraft: ['MinecraftPE', 'sans-serif'],
+         // Custom font name
       },
       animation: {
         bounceSlow: 'bounce 3s infinite', // Slower bounce animation
