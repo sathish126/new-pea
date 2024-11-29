@@ -1,79 +1,58 @@
 import React from "react";
 
 const About = () => (
-  <div className="bg-gradient-to-b from-white to-green-400 min-h-screen">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-12 text-gray-800">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8 text-green-600">
-        About Us
+  <div className="bg-gradient-to-br from-white via-green-50 to-green-200 min-h-screen">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-12">
+      {/* Animated Heading */}
+      <h1 className="text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent 
+        bg-gradient-to-r from-green-600 to-emerald-500 
+        animate-gradient-x tracking-tight">
+        Shaping Future Innovators
       </h1>
-      <div className="space-y-8 sm:space-y-10">
-        {/* Who We Are Section */}
-        <section>
-          <h2 className="text-xl sm:text-2xl font-semibold text-amber-500 mb-3 sm:mb-4">
-            Who We Are
-          </h2>
-          <p className="text-sm sm:text-base leading-relaxed">
-            We are proud members of PSG College of Technology, representing the
-            Production Engineering Association (PEA) & the Society of
-            Manufacturing Engineers (SME), with an ambience of more than four
-            decades. Our mission is to bridge the gap between theory and
-            practice, providing an environment that fosters technical skills
-            and critical thinking through innovative initiatives.
-          </p>
+
+      {/* Content Wrapper with Subtle Shadow and Rounded Corners */}
+      <div className="bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl p-8 sm:p-12 space-y-10">
+        {/* Sections with Modern Typography and Iconography */}
+        <section className="flex items-start space-x-6">
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">Who We Are</h2>
+            <p className="text-gray-700 leading-relaxed">
+              We are passionate innovators from PSG College of Technology, driven by the Production Engineering Association (PEA) and Society of Manufacturing Engineers (SME). With over four decades of expertise, we transform technical education by bridging theory and practice.
+            </p>
+          </div>
         </section>
 
-        {/* Prodothon Section */}
-        <section>
-          <h2 className="text-xl sm:text-2xl font-semibold text-amber-500 mb-3 sm:mb-4">
-            Prodothon: A Signature Event of Innovation
-          </h2>
-          <p className="text-sm sm:text-base leading-relaxed">
-            Launched a year ago, Prodothon has quickly become one of the most
-            awaited events on our campus. This event comprises technical and
-            non-technical challenges, immersing students in the field of
-            production engineering. Participants tackle practical technical
-            competitions, real-life case studies, and delve into areas like lean
-            manufacturing and industrial automation. Alongside, they develop
-            teamwork and leadership skills. Prodothon fosters a hands-on
-            understanding of classroom concepts by challenging students with
-            engineering quizzes and industrial design challenges.
-          </p>
+        <section className="flex items-start space-x-6">
+          <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.192a3 3 0 01-4.243-4.243" />
+            </svg>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-amber-700 mb-4">Prodothon: Innovation's Playground</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Our signature event, Prodothon, is more than a competition—it's a launchpad for innovation. Through technical challenges, case studies, and hands-on learning, we transform students into industry-ready problem solvers.
+            </p>
+          </div>
         </section>
 
-        {/* PEA & SME Section */}
-        <section>
-          <h2 className="text-xl sm:text-2xl font-semibold text-amber-500 mb-3 sm:mb-4">
-            PEA & SME: Excellence in Education
-          </h2>
-          <p className="text-sm sm:text-base leading-relaxed">
-            Led by the Production Engineering Association (PEA) and the Society
-            of Manufacturing Engineers (SME), PSG College of Technology has
-            guided countless students into diverse academic and professional
-            paths. Both societies uphold a commitment to academic excellence and
-            relevance, inspiring students to engage with industry leaders to
-            deepen their understanding of manufacturing principles.
-          </p>
-          <p className="text-sm sm:text-base leading-relaxed mt-4">
-            Our recent event, <strong>PROFINITY</strong>, included a series of
-            activities emphasizing sustainability and lean manufacturing. Our
-            forums promote creative problem-solving skills, critical thinking
-            about manufacturing practices, and the exploration of new
-            technologies, transcending traditional academics.
-          </p>
-        </section>
-
-        {/* Commitment to Excellence Section */}
-        <section>
-          <h2 className="text-xl sm:text-2xl font-semibold text-amber-500 mb-3 sm:mb-4">
-            Commitment to Excellence
-          </h2>
-          <p className="text-sm sm:text-base leading-relaxed">
-            PSG College of Technology continuously strives to create an open
-            and innovative learning environment. Initiatives such as Prodothon
-            significantly contribute to innovation and professional growth,
-            empowering students to realize their potential as future leaders in
-            the production and manufacturing industries.
-          </p>
+        <section className="flex items-start space-x-6">
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.768-.231-1.48-.631-2.202M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.768.231-1.48.631-2.202M10 12a4 4 0 11-8 0 4 4 0 018 0zm4 4a4 4 0 100-8 4 4 0 000 8z" />
+            </svg>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-blue-700 mb-4">Commitment to Excellence</h2>
+            <p className="text-gray-700 leading-relaxed">
+              We don't just teach engineering—we inspire future leaders. Through collaborative learning, industry connections, and innovative platforms like Prodothon, we're redefining technical education.
+            </p>
+          </div>
         </section>
       </div>
     </div>

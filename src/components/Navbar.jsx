@@ -105,7 +105,7 @@ const CircularNavbar = () => {
 
         {/* Circular Menu */}
         <div
-          className={`fixed top-0 bottom-0 bg-black bg-opacity-30 z-40 flex items-center 
+          className={`fixed top-0 bottom-0 bg-gray-100 bg-opacity-30 z-20 flex items-center 
           transition-all duration-300 ease-in-out 
           ${isMenuOpen ? "left-0" : "-left-[700px]"}`}
         >

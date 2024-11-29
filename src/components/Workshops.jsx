@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import WorkshopsCard from "./WorkshopsCard"; // Import WorkshopsCard component
+import WorkshopsCard from "./WorkshopsCard";
 
 const Workshops = () => {
-  // Array of workshops with Google Form URLs for registration
   const workshops = [
     {
       title: "AI Workshop",
@@ -45,26 +44,30 @@ const Workshops = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-blue-400 min-h-screen p-6 md:p-8 lg:p-10">
-      {/* Heading */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-800">
-        Workshops
+    <div className="bg-gradient-to-br from-white via-blue-50 to-blue-200 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      {/* Heading with Modern Typography */}
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 tracking-tight">
+        Skill-Building Workshops
       </h1>
 
-      {/* Workshops Cards Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {/* Workshops Cards Grid Section with Enhanced Spacing and Responsiveness */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {workshops.map((workshop, index) => (
-          <WorkshopsCard
-            key={index}
-            title={workshop.title}
-            description={workshop.description}
-            imageUrl={workshop.imageUrl}
-            buttonText1={workshop.buttonText1}
-            buttonText2={workshop.buttonText2}
-            googleFormUrl={workshop.googleFormUrl}
-            showDescription={activeCardIndex === index}
-            toggleDescription={() => toggleDescription(index)}
-          />
+          <div 
+            key={index} 
+            className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <WorkshopsCard
+              title={workshop.title}
+              description={workshop.description}
+              imageUrl={workshop.imageUrl}
+              buttonText1={workshop.buttonText1}
+              buttonText2={workshop.buttonText2}
+              googleFormUrl={workshop.googleFormUrl}
+              showDescription={activeCardIndex === index}
+              toggleDescription={() => toggleDescription(index)}
+            />
+          </div>
         ))}
       </div>
     </div>

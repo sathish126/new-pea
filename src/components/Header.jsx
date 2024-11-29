@@ -1,11 +1,11 @@
 import React from "react";
 
 const Header = () => (
-  <div className="bg-white border-t-2 border-b-2 border-green-400">
+  <div className="animate-colorShift">
     {/* Container visible on larger screens */}
-    <div className="container mx-auto hidden md:flex items-center justify-between py-4 px-6">
-      {/* Left Section */}
-      <div className="flex items-center space-x-2">
+    <div className="container mx-auto hidden md:grid grid-cols-3 items-center py-4 px-6">
+      {/* Left Section - Aligned to Left */}
+      <div className="flex items-center space-x-2 justify-self-start">
         <img src="/assets/psg_logo.png" alt="Logo 1" className="w-12 h-12" />
         <div className="flex flex-col">
           <span className="text-lg font-semibold">Department of Production Engineering</span>
@@ -18,8 +18,8 @@ const Header = () => (
         <img src="/assets/prodothon_logo.png" alt="Prodothon Logo" className="w-12 h-12" />
       </div>
 
-      {/* Right Section */}
-      <div className="flex flex-col items-start">
+      {/* Right Section - Aligned to Right */}
+      <div className="flex flex-col items-end justify-self-end">
         <div className="flex items-center space-x-4">
           <img src="/assets/PEA_Logo.png" alt="PEA Logo" className="w-10 h-10" />
           <span className="text-lg font-semibold">Production Engineering Association</span>

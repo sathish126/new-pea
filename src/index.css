@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'MinecraftPE';
+    src: url('./assets/fonts/MINECRAFT PE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+/* src/index.css or global stylesheet */
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep particles in the background */
+  }
+  

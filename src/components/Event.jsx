@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import EventCard from "./EventCard"; // Import the EventCard component
+import EventCard from "./EventCard";
 
 const Event = () => {
-  // Array of events with Google Form URLs for registration
   const events = [
     {
       title: "Artificial Intelligence",
@@ -10,7 +9,7 @@ const Event = () => {
       imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
       buttonText2: "Register",
-      googleFormUrl: "https://forms.gle/example1" // Google Form URL for this event
+      googleFormUrl: "https://forms.gle/example1"
     },
     {
       title: "Blockchain Technology",
@@ -18,7 +17,7 @@ const Event = () => {
       imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
       buttonText2: "Register",
-      googleFormUrl: "https://forms.gle/example2" // Google Form URL for this event
+      googleFormUrl: "https://forms.gle/example2"
     },
     {
       title: "Virtual Reality Expo",
@@ -26,7 +25,7 @@ const Event = () => {
       imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
       buttonText2: "Register",
-      googleFormUrl: "https://forms.gle/example3" // Google Form URL for this event
+      googleFormUrl: "https://forms.gle/example3"
     },
     {
       title: "Cybersecurity Essentials",
@@ -34,7 +33,7 @@ const Event = () => {
       imageUrl: "/assets/sample.webp",
       buttonText1: "Explore",
       buttonText2: "Register",
-      googleFormUrl: "https://forms.gle/example4" // Google Form URL for this event
+      googleFormUrl: "https://forms.gle/example4"
     }
   ];
 
@@ -45,26 +44,30 @@ const Event = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-purple-400 min-h-screen p-6 md:p-8 lg:p-10">
-      {/* Heading */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-800">
-        Events
+    <div className="bg-gradient-to-br from-white via-purple-50 to-purple-200 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      {/* Heading with Modern Typography */}
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 tracking-tight">
+        Upcoming Events
       </h1>
 
-      {/* Event Cards Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {/* Event Cards Grid Section with Enhanced Spacing and Responsiveness */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {events.map((event, index) => (
-          <EventCard
-            key={index}
-            title={event.title}
-            description={event.description}
-            imageUrl={event.imageUrl}
-            buttonText1={event.buttonText1}
-            buttonText2={event.buttonText2}
-            googleFormUrl={event.googleFormUrl} // Pass the Google Form URL as a prop
-            showDescription={activeCardIndex === index}
-            toggleDescription={() => toggleDescription(index)}
-          />
+          <div 
+            key={index} 
+            className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <EventCard
+              title={event.title}
+              description={event.description}
+              imageUrl={event.imageUrl}
+              buttonText1={event.buttonText1}
+              buttonText2={event.buttonText2}
+              googleFormUrl={event.googleFormUrl}
+              showDescription={activeCardIndex === index}
+              toggleDescription={() => toggleDescription(index)}
+            />
+          </div>
         ))}
       </div>
     </div>
