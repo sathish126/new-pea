@@ -7,12 +7,11 @@ module.exports = {
         minecraft: ['MinecraftPE', 'sans-serif'],
         'dirty-brush': ['DirtyBrush', 'sans-serif'],
         goodBrush: ['GoodBrush', 'cursive'],
-         // Custom font name
       },
       animation: {
-        bounceSlow: 'bounce 3s infinite', // Slower bounce animation
-        pulseSlow: 'pulse 3s infinite',  // Slower pulse animation
-        colorShift: 'colorShift 5s infinite', // Custom color shift
+        bounceSlow: 'bounce 3s infinite',
+        pulseSlow: 'pulse 3s infinite',
+        colorShift: 'colorShift 5s infinite',
       },
       keyframes: {
         colorShift: {
@@ -21,9 +20,7 @@ module.exports = {
           '100%': { color: '#F59E0B' }, // Back to Yellow
         },
       },
-
     },
-    
   },
   plugins: [],
 };
