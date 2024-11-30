@@ -5,7 +5,8 @@ module.exports = {
       fontFamily: {
         unblessed: ['unblessed', 'sans-serif'],
         minecraft: ['MinecraftPE', 'sans-serif'],
-        dirtybrush: ['dirtybrush', 'sans-serif'],
+        'dirty-brush': ['DirtyBrush', 'sans-serif'],
+        goodBrush: ['GoodBrush', 'cursive'],
          // Custom font name
       },
       animation: {

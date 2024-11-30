@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => (
   <header className="bg-black text-white py-2 px-6 sticky top-0 z-10">
@@ -17,20 +18,20 @@ const Header = () => (
         </div>
       </div>
 
-      {/* Center Logo */}
-      <div className="flex justify-center items-center">
+      {/* Center Logo - Link to Home Page */}
+      <Link to="/" className="flex justify-center items-center">
         <img
           src="/assets/center_logo.png"
           alt="Logo"
-          className="w-16 h-16 hover:scale-110 transition-all duration-300 "
+          className="w-16 h-16 hover:scale-110 transition-all duration-300 cursor-pointer"
         />
-      </div>
+      </Link>
 
       {/* Right Section - Aligned Vertically */}
       <div className="flex flex-col items-end justify-self-end space-y-1">
         <div className="flex items-center space-x-2">
           <img
-            src="/assets/PEA_Logo.png"
+            src="/assets/PEA_logo.png"
             alt="PEA Logo"
             className="w-8 h-8 hover:scale-110 transition-all duration-300 bg-white"
           />
@@ -51,9 +52,9 @@ const Header = () => (
       </div>
     </div>
 
-    {/* Mobile View - Hidden Header */}
+    {/* Mobile View */}
     <div className="lg:hidden">
-      {/* Empty or leave the div blank for mobile */}
+      {/* Empty or mobile navigation */}
     </div>
   </header>
 );

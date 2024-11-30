@@ -44,7 +44,7 @@ const Workshops = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-white via-blue-50 to-blue-200 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br bg-black min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       {/* Heading with Modern Typography */}
       <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 tracking-tight">
         Skill-Building Workshops

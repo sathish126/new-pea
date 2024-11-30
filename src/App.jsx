@@ -7,7 +7,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Event from "./components/Event";
 import Team from "./components/Team";
-import Workshops from "./components/Workshops"; 
+import Workshops from "./components/Workshops";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -17,7 +18,15 @@ export default function App() {
         <Navbar />
         <div className="flex-1">
           <Routes>
-            <Route path="/" element={<MainPage />} />
+            <Route path="/" element={
+              <div>
+                <MainPage />
+                <Event />
+                <Workshops />
+                <About />
+                <Contact />
+              </div>
+            } />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/team" element={<Team />} />

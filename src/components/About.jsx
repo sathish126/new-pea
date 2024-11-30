@@ -1,7 +1,7 @@
 import React from "react";
 
 const About = () => (
-  <div className="bg-gradient-to-br from-white via-green-50 to-green-200 min-h-screen">
+  <div className="bg-gradient-to-br bg-white min-h-screen">
     <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-12">
       {/* Animated Heading */}
       <h1 className="text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent 

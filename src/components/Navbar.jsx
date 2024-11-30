@@ -119,7 +119,7 @@ const CircularNavbar = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="absolute z-50 w-24 h-24 bg-white  bg-opacity-20 rounded-full 
                   flex items-center justify-center 
-                  shadow-2xl hover:bg-white text-white text-lg font-bold"
+                  shadow-2xl hover:bg-white text-white  text-lg font-bold"
               >
                 ✖
               </motion.button>
