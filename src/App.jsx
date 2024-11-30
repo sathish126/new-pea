@@ -8,7 +8,6 @@ import Contact from "./components/Contact";
 import Event from "./components/Event";
 import Team from "./components/Team";
 import Workshops from "./components/Workshops";
-import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,15 +15,14 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         <Header />
         <Navbar />
+        
         <div className="flex-1">
+          
           <Routes>
             <Route path="/" element={
               <div>
+                
                 <MainPage />
-                <Event />
-                <Workshops />
-                <About />
-                <Contact />
               </div>
             } />
             <Route path="/about" element={<About />} />
