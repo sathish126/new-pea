@@ -101,9 +101,7 @@ const Team = () => {
                     <h2 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
                         Our Exceptional Team
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Meet the talented individuals driving innovation in Production Engineering and Manufacturing
-                    </p>
+                   
                 </div>
 
                 {/* Filter Section */}

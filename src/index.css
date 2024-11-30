@@ -14,3 +14,9 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face{
+  fonr-family: 'dirty brush';
+  src: url('./assets/fonts/DirtyBrush.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
