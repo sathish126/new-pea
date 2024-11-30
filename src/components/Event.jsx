@@ -47,7 +47,7 @@ const Event = () => {
     <div className="bg-gradient-to-br bgg-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       {/* Heading with Modern Typography */}
       <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 tracking-tight">
-        Upcoming Events
+        Events
       </h1>
 
       {/* Event Cards Grid Section with Enhanced Spacing and Responsiveness */}

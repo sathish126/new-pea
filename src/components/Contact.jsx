@@ -13,9 +13,6 @@ const Contact = () => {
     "/assets/psg_logo.png",
     "/assets/psg_logo.png",
     "/assets/psg_logo.png",
-    "/assets/psg_logo.png",
-    "/assets/psg_logo.png",
-    "/assets/psg_logo.png"
   ];
 
   return (
@@ -107,7 +104,7 @@ const Contact = () => {
         </div>
 
         {/* Sponsors Marquee Section */}
-        <div className="w-full bg-transparent mt-8 py-6 overflow-hidden">
+        <div className="w-full bg-transparent mt-8 py-8 overflow-hidden">
           <h3 className="text-center text-xl font-semibold mb-4 text-white">
             Our Sponsors
           </h3>
@@ -115,7 +112,7 @@ const Contact = () => {
             {sponsors.concat(sponsors).map((logo, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 mx-8 grayscale hover:grayscale-0 transition-all duration-300"
+                className="flex-shrink-0 mx-20   transition-all duration-300"
               >
                 <img 
                   src={logo} 
