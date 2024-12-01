@@ -15,9 +15,7 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         <Header />
         <Navbar />
-        
         <div className="flex-1">
-          
           <Routes>
             <Route path="/" element={
               <div>

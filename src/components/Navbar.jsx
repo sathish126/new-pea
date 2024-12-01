@@ -7,19 +7,19 @@ const CircularNavbar = () => {
   const [isMobileView, setIsMobileView] = useState(false);
   const navigate = useNavigate();
 
-  // Navigation routes (unchanged)
+  // Navigation routes with more vibrant colors and clearer icons
   const navRoutes = [
-    { path: "/", label: "Home", icon: "🏠", color: "bg-blue-100 hover:bg-blue-200" },
-    { path: "/event", label: "Event", icon: "🎉", color: "bg-green-100 hover:bg-green-200" },
-    { path: "/workshops", label: "Workshops", icon: "📚", color: "bg-yellow-100 hover:bg-yellow-200" },
-    { path: "/accommodation", label: "Accommodation", icon: "🏨", color: "bg-purple-100 hover:bg-purple-200" },
-    { path: "/gallery", label: "Gallery", icon: "🖼️", color: "bg-pink-100 hover:bg-pink-200" },
-    { path: "/about", label: "About", icon: "ℹ️", color: "bg-indigo-100 hover:bg-indigo-200" },
-    { path: "/team", label: "Team", icon: "👥", color: "bg-teal-100 hover:bg-teal-200" },
-    { path: "/contact", label: "Contact", icon: "📞", color: "bg-red-100 hover:bg-red-200" },
+    { path: "/", label: "Home", icon: "🏠", color: "from-blue-400 to-blue-600", textColor: "text-blue-700" },
+    { path: "/event", label: "Event", icon: "🎉", color: "from-green-400 to-green-600", textColor: "text-green-700" },
+    { path: "/workshops", label: "Workshops", icon: "📚", color: "from-yellow-400 to-yellow-600", textColor: "text-yellow-700" },
+    { path: "/accommodation", label: "Accommodation", icon: "🏨", color: "from-purple-400 to-purple-600", textColor: "text-purple-700" },
+    { path: "/gallery", label: "Gallery", icon: "🖼️", color: "from-pink-400 to-pink-600", textColor: "text-pink-700" },
+    { path: "/about", label: "About", icon: "ℹ️", color: "from-indigo-400 to-indigo-600", textColor: "text-indigo-700" },
+    { path: "/team", label: "Team", icon: "👥", color: "from-teal-400 to-teal-600", textColor: "text-teal-700" },
+    { path: "/contact", label: "Contact", icon: "📞", color: "from-red-400 to-red-600", textColor: "text-red-700" },
   ];
 
-  // Detect screen size for mobile view (unchanged)
+  // Detect screen size for mobile view
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 768);
@@ -29,9 +29,9 @@ const CircularNavbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Calculate positions for circular menu (unchanged)
+  // Calculate positions for circular menu
   const calculatePosition = (index, total) => {
-    const radius = 250;
+    const radius = 200;
     const angle = (index / total) * Math.PI * 2 - Math.PI / 2;
     return {
       x: Math.cos(angle) * radius,
@@ -44,22 +44,36 @@ const CircularNavbar = () => {
     setIsMenuOpen(false);
   };
 
-  // Menu trigger button animation variants
+  // Enhanced menu trigger button animation variants
   const menuTriggerVariants = {
-    initial: { rotate: 0, scale: 1 },
+    initial: { 
+      rotate: 0, 
+      scale: 1,
+      boxShadow: "0 0 0 0 rgba(59, 130, 246, 0.5)"
+    },
     hover: { 
       rotate: 180,
-      scale: 1.1,
-      transition: { duration: 0.3 }
+      scale: 1.2,
+      boxShadow: "0 0 20px 5px rgba(59, 130, 246, 0.5)",
+      transition: { 
+        duration: 0.3,
+        type: "spring",
+        stiffness: 300
+      }
     }
   };
 
-  // Circular menu button animation variants
+  // Enhanced circular menu button animation variants
   const circularButtonVariants = {
-    initial: { scale: 0, opacity: 0 },
+    initial: { 
+      scale: 0, 
+      opacity: 0,
+      rotate: -180
+    },
     animate: (custom) => ({
       scale: 1,
       opacity: 1,
+      rotate: 0,
       transition: { 
         delay: custom * 0.1,
         type: "spring",
@@ -69,7 +83,11 @@ const CircularNavbar = () => {
     }),
     hover: { 
       scale: 1.1,
-      transition: { type: "spring", stiffness: 300 }
+      rotate: 5,
+      transition: { 
+        type: "spring", 
+        stiffness: 300 
+      }
     }
   };
 
@@ -78,26 +96,26 @@ const CircularNavbar = () => {
       {/* Menu Trigger */}
       {!isMenuOpen && (
         <motion.button
-          variants={menuTriggerVariants}
-          initial="initial"
-          whileHover="hover"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`fixed z-50 w-14 h-14 animate-colorShift bg-transparent text-gray-800  flex items-center justify-center  
-            transition transform 
-            md:top-1/2 md:-translate-y-1/2 md:left-4 sm:top-4 sm:left-4`}
+        variants={menuTriggerVariants}
+        initial="initial"
+        whileHover="hover"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className={`fixed z-50 w-14 h-14 animate-colorShift bg-transparent text-gray-800  flex items-center justify-center  
+          transition transform 
+          md:top-1/2 md:-translate-y-1/2 md:left-4 sm:top-4 sm:left-4`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="46"
+          height="46"
+          fill="currentColor"
+          className="bi bi-gear"
+          viewBox="0 0 16 16"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="46"
-            height="46"
-            fill="currentColor"
-            className="bi bi-gear"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
-            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
-          </svg>
-        </motion.button>
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+        </svg>
+      </motion.button>
       )}
 
       {/* Circular Menu for Desktop */}
@@ -107,19 +125,35 @@ const CircularNavbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`fixed z-40 top-0 bottom-0 left-0 flex items-center justify-center 
-              bg-gray-100 bg-opacity-30 transition-all duration-300`}
+            className={`fixed inset-0 z-40 flex items-center justify-center 
+              bg-black bg-opacity-50 backdrop-blur-sm`}
           >
             <div className="relative w-[700px] h-[700px] flex items-center justify-center">
-              {/* Central Close Button - Now precisely centered */}
+              {/* Central Close Button - Glowing and Pulsating */}
               <motion.button
                 initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                whileHover={{ scale: 1.2 }}
+                animate={{ 
+                  scale: 1, 
+                  opacity: 1,
+                  boxShadow: [
+                    "0 0 0px 0px rgba(255,255,255,0.3)",
+                    "0 0 10px 5px rgba(255,255,255,0.5)",
+                    "0 0 0px 0px rgba(255,255,255,0.3)"
+                  ]
+                }}
+                whileHover={{ 
+                  scale: 1.2,
+                  boxShadow: "0 0 20px 10px rgba(255,255,255,0.7)"
+                }}
+                transition={{ 
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
                 onClick={() => setIsMenuOpen(false)}
-                className="absolute z-50 w-24 h-24 bg-white  bg-opacity-20 rounded-full 
-                  flex items-center justify-center 
-                  shadow-2xl hover:bg-white text-white  text-lg font-bold"
+                className="absolute z-50 w-24 h-24 bg-white bg-opacity-20 
+                  rounded-full flex items-center justify-center 
+                  text-white text-3xl font-bold backdrop-blur-sm"
               >
                 ✖
               </motion.button>
@@ -136,25 +170,26 @@ const CircularNavbar = () => {
                     animate="animate"
                     whileHover="hover"
                     onClick={() => handleNavigation(route.path)}
-                    className={`absolute w-28 h-28 rounded-full shadow-lg flex flex-col 
+                    className={`absolute w-36 h-24  shadow-2xl flex flex-col 
                       items-center justify-center transition duration-300 transform 
-                      text-center ${route.color}`}
+                      bg-gradient-to-br ${route.color} ${route.textColor} 
+                      hover:scale-110`}
                     style={{
-                      left: `calc(50% + ${x}px - 56px)`,
-                      top: `calc(50% + ${y}px - 56px)`,
+                      left: `calc(50% + ${x}px - 64px)`,
+                      top: `calc(50% + ${y}px - 64px)`,
                     }}
                   >
                     <motion.span 
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
-                      className="text-4xl mb-2"
+                      className="text-5xl mb-2 drop-shadow-lg"
                     >
                       {route.icon}
                     </motion.span>
                     <motion.span 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="text-sm font-medium"
+                      className="text-sm font-bold uppercase tracking-wider"
                     >
                       {route.label}
                     </motion.span>
@@ -166,28 +201,30 @@ const CircularNavbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Sidebar Menu for Mobile (unchanged) */}
+      {/* Sidebar Menu for Mobile (Enhanced) */}
       <AnimatePresence>
         {isMobileView && isMenuOpen && (
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ type: "tween" }}
-            className={`fixed z-40 top-0 bottom-0 left-0 w-64 bg-black text-white`}
+            transition={{ type: "tween", duration: 0.3 }}
+            className={`fixed z-40 top-0 bottom-0 left-0 w-64 
+              bg-gradient-to-br from-blue-900 to-purple-900 
+              text-white shadow-2xl`}
           >
             <motion.button
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               onClick={() => setIsMenuOpen(false)}
-              className="p-5 text-right w-full transition"
+              className="p-5 text-right w-full text-2xl hover:text-red-300 transition"
             >
               ✖
             </motion.button>
             <motion.ul 
               initial="hidden"
               animate="visible"
-              className="mt-8 space-y-4"
+              className="mt-8 space-y-2 px-4"
               variants={{
                 hidden: { opacity: 0 },
                 visible: { 
@@ -207,17 +244,25 @@ const CircularNavbar = () => {
                     visible: { 
                       opacity: 1, 
                       x: 0,
-                      transition: { type: "spring", stiffness: 300 }
+                      transition: { 
+                        type: "spring", 
+                        stiffness: 300 
+                      }
                     }
                   }}
                 >
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      background: 'linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.2))'
+                    }}
                     onClick={() => handleNavigation(route.path)}
-                    className="flex items-center gap-3 p-1 w-full text-left hover:bg-gray-700 rounded-lg"
+                    className="flex items-center gap-4 p-3 w-full text-left 
+                      hover:bg-white hover:bg-opacity-10 
+                      rounded-lg transition duration-300"
                   >
-                    <span className="text-2xl">{route.icon}</span>
-                    <span className="text-lg">{route.label}</span>
+                    <span className="text-3xl drop-shadow-md">{route.icon}</span>
+                    <span className="text-lg font-medium tracking-wider">{route.label}</span>
                   </motion.button>
                 </motion.li>
               ))}
