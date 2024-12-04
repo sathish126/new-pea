@@ -1,25 +1,91 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { 
+  StarsIcon, 
+  GlobeIcon, 
+  CalendarIcon, 
+  HomeIcon, 
+  ImageIcon, 
+  InfoIcon, 
+  UsersIcon, 
+  PhoneIcon,
+  XIcon
+} from "lucide-react";
 
 const CircularNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
+  const [selectedRoute, setSelectedRoute] = useState(null);
   const navigate = useNavigate();
 
-  // Navigation routes with more vibrant colors and clearer icons
   const navRoutes = [
-    { path: "/", label: "Home", icon: "🏠", color: "from-blue-400 to-blue-600", textColor: "text-blue-700" },
-    { path: "/event", label: "Event", icon: "🎉", color: "from-green-400 to-green-600", textColor: "text-green-700" },
-    { path: "/workshops", label: "Workshops", icon: "📚", color: "from-yellow-400 to-yellow-600", textColor: "text-yellow-700" },
-    { path: "/accommodation", label: "Accommodation", icon: "🏨", color: "from-purple-400 to-purple-600", textColor: "text-purple-700" },
-    { path: "/gallery", label: "Gallery", icon: "🖼️", color: "from-pink-400 to-pink-600", textColor: "text-pink-700" },
-    { path: "/about", label: "About", icon: "ℹ️", color: "from-indigo-400 to-indigo-600", textColor: "text-indigo-700" },
-    { path: "/team", label: "Team", icon: "👥", color: "from-teal-400 to-teal-600", textColor: "text-teal-700" },
-    { path: "/contact", label: "Contact", icon: "📞", color: "from-red-400 to-red-600", textColor: "text-red-700" },
+    { 
+      path: "/", 
+      label: "Home", 
+      icon: HomeIcon, 
+      color: "from-blue-500 to-blue-700", 
+      glowColor: "group-hover:shadow-blue-500/50",
+      bgPattern: "bg-gradient-to-tr from-blue-100/20 to-blue-500/20"
+    },
+    { 
+      path: "/event", 
+      label: "Event", 
+      icon: CalendarIcon, 
+      color: "from-green-500 to-green-700", 
+      glowColor: "group-hover:shadow-green-500/50",
+      bgPattern: "bg-gradient-to-tr from-green-100/20 to-green-500/20"
+    },
+    { 
+      path: "/workshops", 
+      label: "Workshops", 
+      icon: GlobeIcon, 
+      color: "from-yellow-500 to-yellow-700", 
+      glowColor: "group-hover:shadow-yellow-500/50",
+      bgPattern: "bg-gradient-to-tr from-yellow-100/20 to-yellow-500/20"
+    },
+    { 
+      path: "/accommodation", 
+      label: "Stays", 
+      icon: StarsIcon, 
+      color: "from-purple-500 to-purple-700", 
+      glowColor: "group-hover:shadow-purple-500/50",
+      bgPattern: "bg-gradient-to-tr from-purple-100/20 to-purple-500/20"
+    },
+    { 
+      path: "/gallery", 
+      label: "Gallery", 
+      icon: ImageIcon, 
+      color: "from-pink-500 to-pink-700", 
+      glowColor: "group-hover:shadow-pink-500/50",
+      bgPattern: "bg-gradient-to-tr from-pink-100/20 to-pink-500/20"
+    },
+    { 
+      path: "/about", 
+      label: "About", 
+      icon: InfoIcon, 
+      color: "from-indigo-500 to-indigo-700", 
+      glowColor: "group-hover:shadow-indigo-500/50",
+      bgPattern: "bg-gradient-to-tr from-indigo-100/20 to-indigo-500/20"
+    },
+    { 
+      path: "/team", 
+      label: "Team", 
+      icon: UsersIcon, 
+      color: "from-teal-500 to-teal-700", 
+      glowColor: "group-hover:shadow-teal-500/50",
+      bgPattern: "bg-gradient-to-tr from-teal-100/20 to-teal-500/20"
+    },
+    { 
+      path: "/contact", 
+      label: "Contact", 
+      icon: PhoneIcon, 
+      color: "from-red-500 to-red-700", 
+      glowColor: "group-hover:shadow-red-500/50",
+      bgPattern: "bg-gradient-to-tr from-red-100/20 to-red-500/20"
+    },
   ];
 
-  // Detect screen size for mobile view
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 768);
@@ -29,7 +95,6 @@ const CircularNavbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Calculate positions for circular menu
   const calculatePosition = (index, total) => {
     const radius = 200;
     const angle = (index / total) * Math.PI * 2 - Math.PI / 2;
@@ -42,80 +107,56 @@ const CircularNavbar = () => {
   const handleNavigation = (path) => {
     navigate(path);
     setIsMenuOpen(false);
+    setSelectedRoute(path);
   };
 
-  // Enhanced menu trigger button animation variants
   const menuTriggerVariants = {
     initial: { 
       rotate: 0, 
       scale: 1,
-      boxShadow: "0 0 0 0 rgba(59, 130, 246, 0.5)"
+      boxShadow: "0 0 0px 0px rgba(79, 70, 229, 0.5)"
     },
     hover: { 
-      rotate: 180,
+      rotate: 360, 
       scale: 1.2,
-      boxShadow: "0 0 20px 5px rgba(59, 130, 246, 0.5)",
-      transition: { 
-        duration: 0.3,
-        type: "spring",
-        stiffness: 300
-      }
-    }
-  };
-
-  // Enhanced circular menu button animation variants
-  const circularButtonVariants = {
-    initial: { 
-      scale: 0, 
-      opacity: 0,
-      rotate: -180
-    },
-    animate: (custom) => ({
-      scale: 1,
-      opacity: 1,
-      rotate: 0,
-      transition: { 
-        delay: custom * 0.1,
-        type: "spring",
-        stiffness: 300,
-        damping: 20
-      }
-    }),
-    hover: { 
-      scale: 1.1,
-      rotate: 5,
-      transition: { 
-        type: "spring", 
-        stiffness: 300 
-      }
+      boxShadow: "0 0 20px 10px rgba(79, 70, 229, 0.5)",
+      transition: { duration: 0.5 }
     }
   };
 
   return (
     <div className="relative">
-      {/* Menu Trigger */}
+      {/* Animated Menu Trigger */}
       {!isMenuOpen && (
         <motion.button
-        variants={menuTriggerVariants}
-        initial="initial"
-        whileHover="hover"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className={`fixed z-50 w-14 h-14 animate-colorShift bg-transparent text-gray-800  flex items-center justify-center  
-          transition transform 
-          md:top-1/2 md:-translate-y-1/2 md:left-4 sm:top-4 sm:left-4`}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="46"
-          height="46"
-          fill="currentColor"
-          className="bi bi-gear"
-          viewBox="0 0 16 16"
+          variants={menuTriggerVariants}
+          initial="initial"
+          whileHover="hover"
+          onClick={() => setIsMenuOpen(true)}
+          className="fixed z-50 w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 
+            rounded-full shadow-2xl flex items-center justify-center 
+            md:top-1/2 md:-translate-y-1/2 md:left-4 sm:top-4 sm:left-4
+            text-white hover:animate-pulse"
         >
-          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
-          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
-        </svg>
-      </motion.button>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            className="w-8 h-8"
+          >
+            <path 
+              d="M3 3h18v18H3z" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2"
+            />
+            <path 
+              d="M9 11l3 3 5-5" 
+              stroke="currentColor" 
+              fill="none" 
+              strokeWidth="2"
+            />
+          </svg>
+        </motion.button>
       )}
 
       {/* Circular Menu for Desktop */}
@@ -125,11 +166,11 @@ const CircularNavbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`fixed inset-0 z-40 flex items-center justify-center 
-              bg-black bg-opacity-50 backdrop-blur-sm`}
+            className="fixed inset-0 z-40 bg-gradient-to-br from-black/70 to-black/90 backdrop-blur-sm 
+              flex items-center justify-center"
           >
             <div className="relative w-[700px] h-[700px] flex items-center justify-center">
-              {/* Central Close Button - Glowing and Pulsating */}
+              {/* Close Button with Pulse Effect */}
               <motion.button
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ 
@@ -151,48 +192,54 @@ const CircularNavbar = () => {
                   repeatType: "reverse"
                 }}
                 onClick={() => setIsMenuOpen(false)}
-                className="absolute z-50 w-24 h-24 bg-white bg-opacity-20 
+                className="absolute z-50
+                  w-24 h-24 bg-white/20 backdrop-blur-md 
                   rounded-full flex items-center justify-center 
-                  text-white text-3xl font-bold backdrop-blur-sm"
+                  text-white hover:bg-white/30"
               >
-                ✖
+                <XIcon className="w-12 h-12" />
               </motion.button>
 
               {/* Circular Navigation Buttons */}
               {navRoutes.map((route, index) => {
                 const { x, y } = calculatePosition(index, navRoutes.length);
+                const IconComponent = route.icon;
+                const isSelected = selectedRoute === route.path;
                 return (
                   <motion.button
                     key={route.path}
-                    custom={index}
-                    variants={circularButtonVariants}
-                    initial="initial"
-                    animate="animate"
-                    whileHover="hover"
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ 
+                      scale: isSelected ? 1.2 : 1, 
+                      opacity: 1 
+                    }}
+                    whileHover={{ 
+                      scale: 1.1, 
+                      rotate: 5,
+                      transition: { duration: 0.3 }
+                    }}
                     onClick={() => handleNavigation(route.path)}
-                    className={`absolute w-36 h-24  shadow-2xl flex flex-col 
-                      items-center justify-center transition duration-300 transform 
-                      bg-gradient-to-br ${route.color} ${route.textColor} 
-                      hover:scale-110`}
+                    className={`group absolute w-32 h-32 rounded-full 
+                      bg-gradient-to-br ${route.color} 
+                      ${route.bgPattern}
+                      shadow-2xl flex flex-col items-center justify-center 
+                      transition-all duration-300 ${route.glowColor} 
+                      hover:shadow-2xl overflow-hidden`}
                     style={{
                       left: `calc(50% + ${x}px - 64px)`,
                       top: `calc(50% + ${y}px - 64px)`,
                     }}
                   >
-                    <motion.span 
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      className="text-5xl mb-2 drop-shadow-lg"
-                    >
-                      {route.icon}
-                    </motion.span>
-                    <motion.span 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="text-sm font-bold uppercase tracking-wider"
-                    >
+                    <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                    <IconComponent 
+                      className={`text-white w-10 h-10 mb-2 
+                        group-hover:scale-110 transition-transform
+                        ${isSelected ? 'scale-125 text-white/90' : ''}`}
+                    />
+                    <span className={`text-white text-sm font-bold uppercase tracking-wider 
+                      ${isSelected ? 'text-opacity-90' : ''}`}>
                       {route.label}
-                    </motion.span>
+                    </span>
                   </motion.button>
                 );
               })}
@@ -201,72 +248,53 @@ const CircularNavbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Sidebar Menu for Mobile (Enhanced) */}
+      {/* Mobile Sidebar */}
       <AnimatePresence>
         {isMobileView && isMenuOpen && (
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ type: "tween", duration: 0.3 }}
-            className={`fixed z-40 top-0 bottom-0 left-0 w-64 
-              bg-gradient-to-br from-blue-900 to-purple-900 
-              text-white shadow-2xl`}
+            className="fixed z-40 top-0 left-0 w-72 h-full 
+              bg-gradient-to-br from-indigo-900 to-purple-900 
+              shadow-2xl p-4 backdrop-blur-md"
           >
-            <motion.button
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              onClick={() => setIsMenuOpen(false)}
-              className="p-5 text-right w-full text-2xl hover:text-red-300 transition"
+            <button 
+              onClick={() => setIsMenuOpen(false)} 
+              className="absolute top-4 right-4 text-2xl text-white 
+                hover:text-red-300 transition transform hover:rotate-180"
             >
               ✖
-            </motion.button>
-            <motion.ul 
-              initial="hidden"
-              animate="visible"
-              className="mt-8 space-y-2 px-4"
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { 
-                  opacity: 1,
-                  transition: {
-                    delayChildren: 0.2,
-                    staggerChildren: 0.1
-                  }
-                }
-              }}
-            >
-              {navRoutes.map((route) => (
-                <motion.li 
-                  key={route.path}
-                  variants={{
-                    hidden: { opacity: 0, x: -50 },
-                    visible: { 
-                      opacity: 1, 
-                      x: 0,
-                      transition: { 
-                        type: "spring", 
-                        stiffness: 300 
-                      }
-                    }
-                  }}
-                >
+            </button>
+            <div className="mt-16 space-y-4">
+              {navRoutes.map((route) => {
+                const IconComponent = route.icon;
+                const isSelected = selectedRoute === route.path;
+                return (
                   <motion.button
-                    whileHover={{ 
-                      scale: 1.05,
-                      background: 'linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.2))'
-                    }}
+                    key={route.path}
+                    whileHover={{ scale: 1.05 }}
                     onClick={() => handleNavigation(route.path)}
-                    className="flex items-center gap-4 p-3 w-full text-left 
-                      hover:bg-white hover:bg-opacity-10 
-                      rounded-lg transition duration-300"
+                    className={`flex items-center w-full p-3 
+                      rounded-lg transition group
+                      ${isSelected 
+                        ? 'bg-white/30 shadow-lg' 
+                        : 'bg-white/10 hover:bg-white/20'}`
+                    }
                   >
-                    <span className="text-3xl drop-shadow-md">{route.icon}</span>
-                    <span className="text-lg font-medium tracking-wider">{route.label}</span>
+                    <IconComponent 
+                      className={`w-8 h-8 mr-4 
+                        group-hover:scale-110 transition
+                        ${isSelected ? 'text-white/90 scale-110' : 'text-white'}`}
+                    />
+                    <span className={`text-white text-lg font-medium 
+                      ${isSelected ? 'font-bold' : ''}`}>
+                      {route.label}
+                    </span>
                   </motion.button>
-                </motion.li>
-              ))}
-            </motion.ul>
+                );
+              })}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
