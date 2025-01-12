@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -13,7 +14,6 @@ module.exports = {
         bounceSlow: 'bounce 3s infinite',
         pulseSlow: 'pulse 3s infinite',
         colorShift: 'colorShift 5s infinite',
-        
       },
       keyframes: {
         colorShift: {
