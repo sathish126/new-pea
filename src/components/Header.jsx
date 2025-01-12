@@ -39,7 +39,7 @@ const Header = () => {
        <header className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 bg-transparent ">
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="text-black hover:text-gray-200 focus:outline-none"
+          className="text-red-800 hover:text-gray-200 focus:outline-none"
         >
           <MenuIcon className="w-9 h-9" />
         </button>
