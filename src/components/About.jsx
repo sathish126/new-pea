@@ -4,7 +4,7 @@ const About = () => (
   <div className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Animated Heading */}
-      <h1 className="text-5xl sm:text-5xl font-dirty-brush text-center mb-4 mt-28 bg-clip-text text-transparent 
+      <h1 className="text-4xl sm:text-5xl font-dirty-brush text-center mb-4 mt-28 bg-clip-text text-transparent 
         bg-gradient-to-r from-green-600 to-emerald-500 animate-gradient-x tracking-tight">
         Shaping Future Innovators
       </h1>
