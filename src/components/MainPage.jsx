@@ -24,12 +24,12 @@ const MainPage = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-[12vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[8vw] 
+            className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[6vw] 
                        font-goodBrush tracking-wide text-transparent bg-clip-text 
                        text-yellow-300 animate-colorShift
                        mb-6 uppercase"
           >
-            PRODOTHON '25
+            P R O  D O T H O N '25
           </motion.h1>
 
           {/* Subheader */}
@@ -44,7 +44,9 @@ const MainPage = () => {
           </motion.p>
         </motion.div>
       </div>
+      
     </main>
+    
   );
 };
 

@@ -26,6 +26,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'WhiteOnBlack';
+  src: url('./assets/fonts/WhiteOnBlack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Marquee Animation */
 @keyframes marquee {
   0% {

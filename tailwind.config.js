@@ -7,11 +7,13 @@ module.exports = {
         minecraft: ['MinecraftPE', 'sans-serif'],
         'dirty-brush': ['DirtyBrush', 'sans-serif'],
         goodBrush: ['GoodBrush', 'cursive'],
+        whiteOnBlack: ['WhiteOnBlack', 'sans-serif'],
       },
       animation: {
         bounceSlow: 'bounce 3s infinite',
         pulseSlow: 'pulse 3s infinite',
         colorShift: 'colorShift 5s infinite',
+        
       },
       keyframes: {
         colorShift: {

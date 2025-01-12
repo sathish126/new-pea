@@ -16,7 +16,7 @@ const combinedMembers = [
 { name: "R R DHIVAGARAN", organization: "PEA", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/dhivagar.JPG", linkedin: "https://linkedin.com/in/seniorexecutive1" },
 { name: "DHINNESH S", organization: "PEA", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/dhinnesh.jpeg", linkedin: "https://linkedin.com/in/seniorexecutive2" },
 { name: "SHANMUGAM S", organization: "PEA", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/shanmugam.jpg", linkedin: "https://linkedin.com/in/seniorexecutive3" },
-{ name: "J DEVI SRI", organization: "PEA", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/devisri.jpg", linkedin: "https://linkedin.com/in/seniorexecutive4" },
+{ name: "J DEVI SRI", organization: "PEA", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/devisri.jpeg", linkedin: "https://linkedin.com/in/seniorexecutive4" },
 { name: "NANDHAGOPAL S", organization: "SME", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/nandhagopal.jpg", linkedin: "https://linkedin.com/in/smeseniorexecutive1" },
 { name: "KRUTHI T P", organization: "SME", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/kruthi.jpg", linkedin: "https://linkedin.com/in/smeseniorexecutive2" },
 { name: "V JAYASENTHILNATHAN", organization: "SME", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/senthi.jpg", linkedin: "https://linkedin.com/in/smeseniorexecutive3" },
@@ -95,10 +95,10 @@ const Team = () => {
     const groupedMembers = groupByRole(filterMembers(combinedMembers));
 
     return (
-        <section id="team" className="py-16 bg-black">
+        <section id="team" className="py-40 bg-gradient-to-br from-blue-50 to-indigo-100">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+                    <h2 className="text-6xl font-dirty-brush mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
                         Our Exceptional Team
                     </h2>
                    
@@ -134,7 +134,7 @@ const Team = () => {
 
                 {Object.keys(groupedMembers).map((role) => (
                     <div key={role} className="mb-12">
-                        <h3 className="text-3xl font-semibold mb-6 text-center text-indigo-600 border-b-2 border-indigo-300 pb-2">
+                        <h3 className="text-3xl font-serif mb-6 text-center text-indigo-600 border-b-2 border-indigo-300 pb-2">
                             {role}
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -153,9 +153,9 @@ const Team = () => {
                                             }}
                                         />
                                         <div className="p-4 text-center bg-gradient-to-b from-white to-gray-100">
-                                            <h4 className="text-lg font-bold text-indigo-700">{member.name}</h4>
+                                            <h4 className="text-lg font-serif text-indigo-700">{member.name}</h4>
                                             {member.organization && (
-                                                <p className="text-sm text-gray-600 mb-2">{member.organization}</p>
+                                                <p className="text-sm text-gray-600 font-serif mb-2">{member.organization}</p>
                                             )}
                                             <a
                                                 href={member.linkedin}
