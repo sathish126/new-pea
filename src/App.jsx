@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Event from "./components/Event";
 import Team from "./components/Team";
 import Workshops from "./components/Workshops";
+import Gallery from "./components/Gallery";
 
 export default function App() {
   return (
@@ -25,7 +26,10 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/team" element={<Team />} />
             <Route path="/event" element={<Event />} />
-            <Route path="/workshops" element={<Workshops />} /> 
+            <Route path="/workshops" element={<Workshops />} />
+            <Route path="/gallery" element={<Gallery />} />
+
+            
           </Routes>
         </div>
       </div>
