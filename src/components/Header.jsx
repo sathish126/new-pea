@@ -123,7 +123,7 @@ const Header = () => {
       </header>
 
       {/* Desktop Navigation Bar */}
-      <nav className="hidden lg:flex fixed top-[88px] left-0 right-0 z-50 bg-gray-100 font-whiteOnBlack a text-green-800 font- text-2xl shadow-md">
+      <nav className="hidden lg:flex fixed top-[88px] left-0 right-0 z-50 bg-gray-100 font-extralight a text-green-800 font- text-2xl shadow-md">
         <div className="flex justify-center space-x-24 px-6 py-3 w-full">
           {navRoutes.map((route) => (
             <button
