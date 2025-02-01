@@ -19,12 +19,12 @@ const Header = () => {
 
   const navRoutes = [
     { path: "/", label: "Home", icon: HomeIcon },
-    { path: "/event", label: "Competitions", icon: CalendarIcon },
-    { path: "/accommodation", label: "Accommodation", icon: StarsIcon }, // Added Accommodation
-    { path: "/gallery", label: "Gallery", icon: ImageIcon },
-    { path: "/about", label: "About", icon: InfoIcon },
-    { path: "/team", label: "Team", icon: UsersIcon },
-    { path: "/contact", label: "Contact", icon: PhoneIcon },
+    { path: "./event", label: "Competitions", icon: CalendarIcon },
+    { path: "./accommodation", label: "Accommodation", icon: StarsIcon }, // Added Accommodation
+    { path: "./gallery", label: "Gallery", icon: ImageIcon },
+    { path: "./about", label: "About", icon: InfoIcon },
+    { path: "./team", label: "Team", icon: UsersIcon },
+    { path: "./contact", label: "Contact", icon: PhoneIcon },
   ];
 
   const handleNavigation = (path) => {

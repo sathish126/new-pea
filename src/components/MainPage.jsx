@@ -11,10 +11,10 @@ const MainPage = () => {
 
       {/* Hero Section */}
       <SplashCursor />
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Title */}
-          <h1 className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[6vw] 
+          <h1 className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] 
                        font-goodBrush tracking-wide text-transparent bg-clip-text 
                        bg-gradient-to-r from-yellow-300 via-red-500 to-purple-500 
                        animate-gradientShift mb-6 uppercase">
@@ -22,7 +22,7 @@ const MainPage = () => {
           </h1>
 
           {/* Subheader */}
-          <p className="text-[5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[2.5vw] 
+          <p className="text-[5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.75vw] 
                        text-white mb-8 max-w-2xl mx-auto font-goodBrush animate-colorShift">
             Learn - innovate - impact
           </p>
@@ -35,59 +35,43 @@ const MainPage = () => {
           </div>
 
           {/* Scroll Down Button */}
-          {/* Scroll Down Button */}
-          {/* Scroll Down Button */}
-<div className="mt-11 relative group">
-  {/* Animated background effect */}
-  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
-  
-  {/* Main button */}
-  <a
-    href="/path-to-your-brochure.pdf"
-    download="Event_Brochure.pdf"
-    className="relative flex items-center justify-center text-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-purple-500/50"
-  >
-    <div className="flex items-center gap-2">
-      {/* Download icon */}
-      <svg 
-        className="w-6 h-6 animate-bounce group-hover:animate-none" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24"
-      >
-        <path 
-          strokeLinecap="round" 
-          strokeLinejoin="round" 
-          strokeWidth="2" 
-          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-        />
-      </svg>
-      
-      {/* Button text */}
-      <span>Download Brochure</span>
-    </div>
-    
-    {/* Sparkle effect */}
-    <div className="absolute -right-1 -top-1 w-3 h-3 bg-white rounded-full opacity-70 animate-ping"></div>
-  </a>
-</div>
+          <div className="mt-11 relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
+            <a
+              href="/path-to-your-brochure.pdf"
+              download="Event_Brochure.pdf"
+              className="relative flex items-center justify-center text-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-purple-500/50"
+            >
+              <div className="flex items-center gap-2">
+                <svg 
+                  className="w-6 h-6 animate-bounce group-hover:animate-none" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth="2" 
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+                <span>Download Brochure</span>
+              </div>
+              <div className="absolute -right-1 -top-1 w-3 h-3 bg-white rounded-full opacity-70 animate-ping"></div>
+            </a>
+          </div>
         </div>
       </div>
-
+      
       {/* About Section */}
       <div id="about" className="relative min-h-screen overflow-hidden">
-        {/* Particles background */}
         <ParticlesComponent />
-
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Heading */}
           <h1 className="text-4xl sm:text-5xl font-romanSD text-center mb-4 mt-28 bg-clip-text text-transparent 
             bg-gradient-to-r from-green-600 to-emerald-500 animate-gradient-x tracking-tight">
             About Prodothon
           </h1>
-
-          {/* Content Wrapper */}
           <div className="bg-transparent backdrop-blur-lg shadow-xl rounded-3xl p-8 sm:p-12 space-y-12">
             {/* Prodothon Overview Section */}
             <section className="flex flex-col sm:flex-row items-start space-x-0 sm:space-x-6">
@@ -111,7 +95,7 @@ const MainPage = () => {
                 <h2 className="text-2xl sm:text-3xl font-semibold text-green-700 mb-4">
                   What is Prodothon?
                 </h2>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-white leading-relaxed text-lg">
                   Prodothon is an Inter-College Festival at the Department of Production
                   Engineering, PSG College of Technology. Spanning two days, this event
                   is tailored for undergraduate students from the Mechanical Stream.
@@ -146,7 +130,7 @@ const MainPage = () => {
                 <h2 className="text-2xl sm:text-3xl font-semibold text-amber-700 mb-4">
                   Our Mission
                 </h2>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-white leading-relaxed text-lg">
                   To foster innovation, technical proficiency, and collaborative learning
                   among engineering students by providing a competitive platform that
                   emphasizes cutting-edge technologies, practical knowledge,
@@ -177,7 +161,7 @@ const MainPage = () => {
                 <h2 className="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4">
                   Our Vision
                 </h2>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-white leading-relaxed text-lg">
                   To become a flagship event that inspires the next generation of engineers
                   to embrace excellence in manufacturing and mechanical engineering,
                   bridging the gap between academic learning and industry practices while
@@ -187,17 +171,13 @@ const MainPage = () => {
                 </p>
               </div>
             </section>
-            
           </div>
         </div>
       </div>
 
       {/* Contact Section */}
       <div id="contact" className="relative min-h-screen overflow-hidden bg-transparent">
-        {/* Particles background */}
         <ParticlesComponent />
-
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-36">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
             {/* Contact Information Section */}
@@ -205,8 +185,6 @@ const MainPage = () => {
               <h1 className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 animate-gradient-x">
                 Contact Us
               </h1>
-
-              {/* Contact Details */}
               <div className="space-y-6">
                 {/* Address */}
                 <div className="flex items-center space-x-4">

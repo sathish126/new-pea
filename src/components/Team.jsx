@@ -11,7 +11,7 @@ const combinedMembers = [
   // Joint Secretaries
   { name: "B VIKASHINI", organization: "PEA", role: "Joint Secretary", image: "/assets/img/Team/JOINT_SEC/Vikashini.JPG", linkedin: "https://linkedin.com/in/joinsecretary1" },
   { name: "BALAJI C", organization: "PEA", role: "Joint Secretary", image: "/assets/img/Team/JOINT_SEC/balaji.jpeg", linkedin: "https://linkedin.com/in/joinsecretary2" },
-  { name: "SUBIRAMANIAN V J", organization: "SME", role: "Joint Secretary", image: "/assets/img/Team/JOINT_SEC/subiramanian.jpg", linkedin: "https://linkedin.com/in/smejoinsecretary1" },
+  { name: "SUBIRAMANIAN V J", organization: "SME", role: "Joint Secretary", image: "/assets/img/Team/JOINT_SEC/subiramanian.jpeg", linkedin: "https://linkedin.com/in/smejoinsecretary1" },
   { name: "R S DIYA VISALI", organization: "SME", role: "Joint Secretary", image: "/assets/img/Team/JOINT_SEC/Diya.jpg", linkedin: "https://linkedin.com/in/smejoinsecretary2" },
 
   // Senior Executives
@@ -29,7 +29,7 @@ const combinedMembers = [
   { name: "DEEPIKA S P", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Dheepika.jpg", linkedin: "https://linkedin.com/in/juniorexecutive2" },
   { name: "NHARGUNA NANGAI M B", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/NN.jpeg", linkedin: "https://linkedin.com/in/juniorexecutive3" },
   { name: "NIMESHA S", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Nimesha.jpg", linkedin: "https://linkedin.com/in/juniorexecutive4" },
-  { name: "AISHAA NIHAR Z", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/junior_executive5.jpg", linkedin: "https://linkedin.com/in/juniorexecutive5" },
+  { name: "AISHAA NIHAR Z", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/aisha.jpeg", linkedin: "https://linkedin.com/in/juniorexecutive5" },
   { name: "KANCIA ROSLIN MARY", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Kancia.jpg", linkedin: "https://linkedin.com/in/juniorexecutive6" },
   { name: "RITHIKA G", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/rithika.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive1" },
   { name: "VINOTHINI D", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Vinothini.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive2" },
@@ -84,7 +84,7 @@ const Team = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-6xl font-dirty-brush mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 animate-gradient-x">
+          <h2 className="text-6xl font-romanSD mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 animate-gradient-x">
             Our Exceptional Team
           </h2>
         </motion.div>

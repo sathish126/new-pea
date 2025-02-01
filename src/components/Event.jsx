@@ -83,7 +83,7 @@ const EventDashboard = () => {
       detailsPdf: "/assets/robo-evade-details.pdf",
     },
     {
-      poster: "assets/img/eventposters/stick it structure it.png",
+      poster: "assets/img/eventposters/structure.jpg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
       detailsPdf: "/assets/stick-it-structure-it-details.pdf",
     },
