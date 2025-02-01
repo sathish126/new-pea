@@ -1,6 +1,7 @@
 import React from 'react';
 import ParticlesComponent from "./particles";
 import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import SplashCursor from './SplashCursor';
 
 const MainPage = () => {
   return (
@@ -9,6 +10,7 @@ const MainPage = () => {
       <ParticlesComponent />
 
       {/* Hero Section */}
+      <SplashCursor />
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Title */}

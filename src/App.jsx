@@ -8,14 +8,14 @@ import Event from "./components/Event";
 import Team from "./components/Team";
 import Gallery from "./components/Gallery";
 import Accommodation from "./components/Accommodation";
-import SplashCursor from './components/SplashCursor'
+
 
 export default function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <SplashCursor />
+        
         <div className="flex-1">
           <Routes>
             <Route path="/" element={
