@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import ParticlesComponent from "./particles";
 import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
@@ -11,20 +10,10 @@ const Contact = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-36">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8"
-        >
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           {/* Contact Information Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 p-8 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all"
-          >
-            <h1 className="text-5xl font-dirty-brush mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 animate-gradient-x">
+          <div className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 p-8 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all">
+            <h1 className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 animate-gradient-x">
               Contact Us
             </h1>
 
@@ -32,27 +21,21 @@ const Contact = () => {
             <div className="space-y-6">
               {/* Address */}
               <div className="flex items-center space-x-4">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <div>
                   <MapPin className="text-pink-400 flex-shrink-0" size={28} />
-                </motion.div>
+                </div>
                 <p className="text-gray-200 font-serif">
                   Department of Production Engineering,<br />
                   PSG College of Technology,
-                  Coimbatore,<br /> Tamil Nadu, India
+                  Peelamedu,<br />Coimbatore - 641004<br /> Tamil Nadu, India.
                 </p>
               </div>
 
               {/* Email */}
               <div className="flex items-center space-x-4">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <div>
                   <Mail className="text-red-400 font-serif flex-shrink-0" size={28} />
-                </motion.div>
+                </div>
                 <a
                   href="mailto:prod@psg.com"
                   className="text-blue-300 font-serif hover:text-blue-100 transition-colors"
@@ -64,28 +47,22 @@ const Contact = () => {
               {/* Phone Numbers */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 10 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
+                  <div>
                     <Phone className="text-green-400 flex-shrink-0" size={28} />
-                  </motion.div>
+                  </div>
                   <div>
                     <p className="text-gray-200 font-serif">
-                      Arun Secretary-SME: +91 9876543210
+                      ARUN K : +91 9003585358
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 10 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
+                  <div>
                     <Phone className="text-green-400 flex-shrink-0" size={28} />
-                  </motion.div>
+                  </div>
                   <div>
                     <p className="text-gray-200 font-serif">
-                      Nitish Secretary-PEA: +91 9876543210
+                      NITIS PRABU M : +91 9791947147
                     </p>
                   </div>
                 </div>
@@ -94,37 +71,28 @@ const Contact = () => {
 
             {/* Social Media Links */}
             <div className="mt-10 flex justify-center space-x-8">
-              <motion.a
-                whileHover={{ scale: 1.2, rotate: 15 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                href="https://instagram.com/psg_cet"
+              <a
+                href="https://www.instagram.com/pea_sme?igsh=ZWpicjExYzZtYnl5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-400 hover:text-pink-300 transition-all"
               >
                 <Instagram size={36} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.2, rotate: 15 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                href="https://linkedin.com/school/psg-college-of-technology"
+              </a>
+              <a
+                href="https://www.linkedin.com/company/pea-sme-psg-tech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-300 transition-all"
               >
                 <Linkedin size={36} />
-              </motion.a>
+              </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Google Maps Embed */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 p-8 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all"
-          >
-            <h2 className="text-5xl font-dirty-brush mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 animate-gradient-x">
+          <div className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 p-8 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all">
+            <h2 className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 animate-gradient-x">
               Our Location
             </h2>
             <div className="w-full h-96 overflow-hidden rounded-2xl border-2 border-purple-500/20">
@@ -139,8 +107,8 @@ const Contact = () => {
                 className="filter grayscale-[30%] hover:grayscale-0 transition-all"
               ></iframe>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </main>
   );

@@ -19,9 +19,8 @@ const Header = () => {
 
   const navRoutes = [
     { path: "/", label: "Home", icon: HomeIcon },
-    { path: "/event", label: "Event", icon: CalendarIcon },
-    { path: "/workshops", label: "Workshops", icon: GlobeIcon },
-    { path: "/accommodation", label: "Stays", icon: StarsIcon },
+    { path: "/event", label: "Competitions", icon: CalendarIcon },
+    { path: "/accommodation", label: "Accommodation", icon: StarsIcon }, // Added Accommodation
     { path: "/gallery", label: "Gallery", icon: ImageIcon },
     { path: "/about", label: "About", icon: InfoIcon },
     { path: "/team", label: "Team", icon: UsersIcon },
@@ -35,15 +34,14 @@ const Header = () => {
 
   return (
     <>
-       {/* Mobile Header */}
-       <header className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 bg-transparent ">
+      {/* Mobile Header */}
+      <header className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 bg-transparent">
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
           className="text-red-800 hover:text-gray-200 focus:outline-none"
         >
           <MenuIcon className="w-9 h-9" />
         </button>
-        
       </header>
 
       {/* Mobile Sidebar */}
@@ -54,7 +52,6 @@ const Header = () => {
       >
         <div className="flex flex-col h-full p-4 space-y-6">
           <div className="flex justify-between items-center">
-            
             <button
               onClick={() => setSidebarOpen(false)}
               className="text-white hover:text-yellow-300 focus:outline-none"
@@ -78,7 +75,7 @@ const Header = () => {
       </aside>
 
       {/* Desktop Header */}
-      <header className="hidden lg:flex fixed top-0 left-0 right-0 z-50 items-center justify-between px-6 py-4 bg-gray-100 shadow-md">
+      <header className="hidden lg:flex fixed top-0 left-0 right-0 z-30 items-center justify-between px-1 py-1 bg-gray-100 shadow-md">
         <div className="flex items-center space-x-4">
           <img
             src="/assets/psg_logo.png"
@@ -123,8 +120,8 @@ const Header = () => {
       </header>
 
       {/* Desktop Navigation Bar */}
-      <nav className="hidden lg:flex fixed top-[88px] left-0 right-0 z-50 bg-gray-100 font-extralight a text-green-800 font- text-2xl shadow-md">
-        <div className="flex justify-center space-x-24 px-6 py-3 w-full">
+      <nav className="hidden lg:flex fixed top-[74px] left-0 right-0 z-50 bg-gray-100 font-extralight text-green-800 text-2xl shadow-md">
+        <div className="flex justify-center space-x-24 px-1 py-1 w-full">
           {navRoutes.map((route) => (
             <button
               key={route.path}

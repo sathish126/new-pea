@@ -92,6 +92,16 @@ const EventDashboard = () => {
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
       detailsPdf: "/assets/deconstructing-design-showdown-details.pdf",
     },
+    {
+      poster: "assets/img/eventposters/workshop1.jpg",
+      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
+      detailsPdf: "/assets/production-meishu-details.pdf",
+    },
+    {
+      poster: "assets/img/eventposters/PAPER PRESENTATION.jpg",
+      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
+      detailsPdf: "/assets/adventhon-details.pdf",
+    },
   ];
 
   return (

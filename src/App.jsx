@@ -6,14 +6,16 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Event from "./components/Event";
 import Team from "./components/Team";
-import Workshops from "./components/Workshops";
 import Gallery from "./components/Gallery";
+import Accommodation from "./components/Accommodation";
+import SplashCursor from './components/SplashCursor'
 
 export default function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
+        <SplashCursor />
         <div className="flex-1">
           <Routes>
             <Route path="/" element={
@@ -26,8 +28,10 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/team" element={<Team />} />
             <Route path="/event" element={<Event />} />
-            <Route path="/workshops" element={<Workshops />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/accommodation" element={<Accommodation />} />
+
+
 
             
           </Routes>

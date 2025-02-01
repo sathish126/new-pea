@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import ParticlesComponent from './particles';
 
@@ -25,25 +25,25 @@ const combinedMembers = [
   { name: "GOKUL RAMANA V", organization: "SME", role: "Senior Executive", image: "/assets/img/Team/SENIOR_EXE/gokul.JPG", linkedin: "https://linkedin.com/in/smeseniorexecutive4" },
 
   // Junior Executives
-  { name: "SUKANTH N R", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Sukanth .jpg", linkedin: "https://linkedin.com/in/juniorexecutive1" },
+  { name: "SUKANTH N R", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/sukanth.jpg", linkedin: "https://linkedin.com/in/juniorexecutive1" },
   { name: "DEEPIKA S P", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Dheepika.jpg", linkedin: "https://linkedin.com/in/juniorexecutive2" },
-  { name: "NHARGUNA NANGAI M B", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/junior_executive3.jpg", linkedin: "https://linkedin.com/in/juniorexecutive3" },
+  { name: "NHARGUNA NANGAI M B", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/NN.jpeg", linkedin: "https://linkedin.com/in/juniorexecutive3" },
   { name: "NIMESHA S", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Nimesha.jpg", linkedin: "https://linkedin.com/in/juniorexecutive4" },
   { name: "AISHAA NIHAR Z", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/junior_executive5.jpg", linkedin: "https://linkedin.com/in/juniorexecutive5" },
   { name: "KANCIA ROSLIN MARY", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Kancia.jpg", linkedin: "https://linkedin.com/in/juniorexecutive6" },
   { name: "RITHIKA G", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/rithika.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive1" },
   { name: "VINOTHINI D", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Vinothini.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive2" },
   { name: "KRISITHA J S", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Krisitha.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive3" },
-  { name: "MOHAMED VASEEM J", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Mohamed Vaseem.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive4" },
+  { name: "MOHAMED VASEEM J", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/vaseem.jpeg", linkedin: "https://linkedin.com/in/smejuniorexecutive4" },
   { name: "MANJUSWETHA S V", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Manjuswetha.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive5" },
   { name: "KISHORE KANΝΑΝ Β", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/kishorekannan.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive6" },
 
   // Common volunteers for both organizations
   { name: "THIRUSURIYAA S U", role: "Volunteer", image: "/assets/assets/img/volunteer1.jpg", linkedin: "https://linkedin.com/in/volunteer1" },
   { name: "N MUGILAN", role: "Volunteer", image: "/assets/img/volunteer2.jpg", linkedin: "https://linkedin.com/in/volunteer2" },
-  { name: "GIRIDHARAN T", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/Giri Dharnan.jpg", linkedin: "https://linkedin.com/in/volunteer3" },
+  { name: "GIRIDHARAN T", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/giri.jpg", linkedin: "https://linkedin.com/in/volunteer3" },
   { name: "SABARISAN E",  role: "Volunteer", image: "/assets/img/volunteer4.jpg", linkedin: "https://linkedin.com/in/volunteer4" },
-  { name: "ADHIYAN KHAN A", role: "Volunteer", image: "/assets/img/volunteer5.jpg", linkedin: "https://linkedin.com/in/volunteer5" },
+  { name: "ADHIYAN KHAN A", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/adhiyan.jpg", linkedin: "https://linkedin.com/in/volunteer5" },
   { name: "NEKA S", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/Neka.jpg", linkedin: "https://linkedin.com/in/volunteer6" },
   { name: "RIVALIN R",  role: "Volunteer", image: "/assets/img/volunteer7.jpg", linkedin: "https://linkedin.com/in/volunteer7" },
   { name: "SRIVARDHNY D S", role: "Volunteer", image: "/assets/img/volunteer8.jpg", linkedin: "https://linkedin.com/in/volunteer8" },
@@ -58,17 +58,7 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-// Filter Icon SVG
-const FilterIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-gray-500">
-    <path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/>
-  </svg>
-);
-
 const Team = () => {
-  const [selectedOrganization, setSelectedOrganization] = useState('All');
-  const [selectedRole, setSelectedRole] = useState('All');
-
   const groupByRole = (members) => {
     return members.reduce((groups, member) => {
       if (!groups[member.role]) {
@@ -79,17 +69,7 @@ const Team = () => {
     }, {});
   };
 
-  const filterMembers = (members) => {
-    return members.filter(member => 
-      (selectedOrganization === 'All' || member.organization === selectedOrganization) &&
-      (selectedRole === 'All' || member.role === selectedRole)
-    );
-  };
-
-  const uniqueOrganizations = ['All', ...new Set(combinedMembers.map(m => m.organization).filter(org => org))];
-  const uniqueRoles = ['All', ...new Set(combinedMembers.map(m => m.role))];
-
-  const groupedMembers = groupByRole(filterMembers(combinedMembers));
+  const groupedMembers = groupByRole(combinedMembers);
 
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -107,39 +87,6 @@ const Team = () => {
           <h2 className="text-6xl font-dirty-brush mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 animate-gradient-x">
             Our Exceptional Team
           </h2>
-        </motion.div>
-
-        {/* Filter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center space-x-4 mb-8"
-        >
-          <div className="flex items-center space-x-2">
-            <FilterIcon />
-            <select 
-              value={selectedOrganization} 
-              onChange={(e) => setSelectedOrganization(e.target.value)}
-              className="p-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
-              {uniqueOrganizations.map(org => (
-                <option key={org} value={org}>{org}</option>
-              ))}
-            </select>
-          </div>
-          <div className="flex items-center space-x-2">
-            <FilterIcon />
-            <select 
-              value={selectedRole} 
-              onChange={(e) => setSelectedRole(e.target.value)}
-              className="p-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
-              {uniqueRoles.map(role => (
-                <option key={role} value={role}>{role}</option>
-              ))}
-            </select>
-          </div>
         </motion.div>
 
         {/* Team Members */}

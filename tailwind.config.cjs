@@ -9,6 +9,8 @@ export default {
         'dirty-brush': ['DirtyBrush', 'sans-serif'],
         goodBrush: ['GoodBrush', 'cursive'],
         whiteOnBlack: ['WhiteOnBlack', 'sans-serif'],
+        romanSD: ['RomanSD', 'sans-serif'], 
+        
       },
       animation: {
         bounceSlow: 'bounce 3s infinite',

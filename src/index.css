@@ -29,9 +29,17 @@
 @font-face {
   font-family: 'WhiteOnBlack';
   src: url('./assets/fonts/WhiteOnBlack.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
 }
+@font-face {
+  font-family: 'RomanSD';
+  src: url('./assets/fonts/Roman SD.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
 
 /* Marquee Animation */
 @keyframes marquee {

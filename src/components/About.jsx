@@ -1,12 +1,25 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import ParticlesComponent from "./particles";
 
 const About = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Particles background */}
       <ParticlesComponent />
+
+      {/* Smooth Scroll Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-2 bg-green-600 z-50"
+        style={{ scaleX }}
+      />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -15,7 +28,7 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl font-dirty-brush text-center mb-4 mt-28 bg-clip-text text-transparent 
+          className="text-4xl sm:text-5xl font-romanSD text-center mb-4 mt-28 bg-clip-text text-transparent 
           bg-gradient-to-r from-green-600 to-emerald-500 animate-gradient-x tracking-tight"
         >
           About Prodothon
