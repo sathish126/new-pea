@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import ParticlesComponent from "./particles";
 import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import SplashCursor from './SplashCursor';
 
 const MainPage = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  useEffect(() => {
+    // Any additional setup can go here
+  }, []);
+
   return (
     <main className="relative min-h-screen overflow-hidden flex flex-col justify-between">
+      {/* Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-2 bg-gradient-to-r from-purple-500 to-pink-500 z-50"
+        style={{ scaleX }}
+      />
+
       {/* Particles background */}
       <ParticlesComponent />
 
@@ -14,56 +32,106 @@ const MainPage = () => {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Title */}
-          <h1 className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] 
+          <motion.h1 
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] 
                        font-goodBrush tracking-wide text-transparent bg-clip-text 
                        bg-gradient-to-r from-yellow-300 via-red-500 to-purple-500 
-                       animate-gradientShift mb-6 uppercase">
+                       animate-gradientShift mb-6 uppercase"
+          >
             P R O  D O T H O N '25
-          </h1>
+          </motion.h1>
 
           {/* Subheader */}
-          <p className="text-[5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.75vw] 
-                       text-white mb-8 max-w-2xl mx-auto font-goodBrush animate-colorShift">
+          <motion.p 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-[5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.75vw] 
+                       text-white mb-8 max-w-2xl mx-auto font-goodBrush animate-colorShift"
+          >
             Learn - innovate - impact
-          </p>
+          </motion.p>
 
           {/* Event Date */}
-          <div className="mt-8">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-8"
+          >
             <h2 className="text-4xl sm:text-5xl font-goodBrush text-white mb-4">
               March 1 & 2, 2025
             </h2>
-          </div>
+          </motion.div>
 
-          {/* Scroll Down Button */}
-          <div className="mt-11 relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
-            <a
-              href="/path-to-your-brochure.pdf"
-              download="Event_Brochure.pdf"
-              className="relative flex items-center justify-center text-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-purple-500/50"
-            >
-              <div className="flex items-center gap-2">
-                <svg 
-                  className="w-6 h-6 animate-bounce group-hover:animate-none" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth="2" 
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                  />
-                </svg>
-                <span>Download Brochure</span>
-              </div>
-              <div className="absolute -right-1 -top-1 w-3 h-3 bg-white rounded-full opacity-70 animate-ping"></div>
-            </a>
-          </div>
+          {/* Buttons */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-11 space-y-6"
+          >
+            {/* Download Brochure Button */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
+              <a
+                href="/path-to-your-brochure.pdf"
+                download="Event_Brochure.pdf"
+                className="relative flex items-center justify-center text-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-purple-500/50"
+              >
+                <div className="flex items-center gap-2">
+                  <svg 
+                    className="w-6 h-6 animate-bounce group-hover:animate-none" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth="2" 
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                    />
+                  </svg>
+                  <span>Download Brochure</span>
+                </div>
+                <div className="absolute -right-1 -top-1 w-3 h-3 bg-white rounded-full opacity-70 animate-ping"></div>
+              </a>
+            </div>
+
+            {/* Register Now Button */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register"
+                className="relative flex items-center justify-center text-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-green-500/50"
+              >
+                <div className="flex items-center gap-2">
+                  <svg 
+                    className="w-6 h-6 animate-bounce group-hover:animate-none" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth="2" 
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                  <span>Register Now</span>
+                </div>
+                <div className="absolute -right-1 -top-1 w-3 h-3 bg-white rounded-full opacity-70 animate-ping"></div>
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
-      
+
       {/* About Section */}
       <div id="about" className="relative min-h-screen overflow-hidden">
         <ParticlesComponent />
