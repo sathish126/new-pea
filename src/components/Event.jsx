@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ParticlesComponent from "./particles";
 
-const EventCard = ({ poster, registrationLink, detailsPdf }) => {
+const EventCard = ({ poster, registrationLink }) => {
   const [isZoomed, setIsZoomed] = useState(false);
 
   const handleRegistration = () => {
     window.open(registrationLink, "_blank");
-  };
-
-  const handleDownloadDetails = () => {
-    window.open(detailsPdf, "_blank");
   };
 
   const toggleZoom = () => {
@@ -26,7 +22,7 @@ const EventCard = ({ poster, registrationLink, detailsPdf }) => {
     >
       {/* Poster */}
       <motion.div
-        className="cursor-pointer"
+        className="cursor-pointer relative"
         onClick={toggleZoom}
         animate={{ scale: isZoomed ? 1.5 : 1 }}
         transition={{ duration: 0.3 }}
@@ -34,73 +30,55 @@ const EventCard = ({ poster, registrationLink, detailsPdf }) => {
         <img
           src={poster}
           alt="Event Poster"
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover transform transition-transform duration-300 hover:scale-105"
         />
+        <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300"></div>
       </motion.div>
 
-      {/* Buttons */}
+      {/* Button */}
       <div className="p-4 bg-transparent">
-        <div className="flex justify-between space-x-4">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleRegistration}
-            className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-colors flex-1"
-          >
-            Register Now
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleDownloadDetails}
-            className="bg-white text-purple-500 px-4 py-2 rounded-lg border border-purple-500 hover:bg-purple-50 transition-colors flex-1"
-          >
-            More Details
-          </motion.button>
-        </div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handleRegistration}
+          className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-lg hover:from-purple-600 hover:to-indigo-600 transition-colors"
+        >
+          Register Now
+        </motion.button>
       </div>
     </motion.div>
   );
 };
-
-// ... rest of the code remains the same
 
 const EventDashboard = () => {
   const events = [
     {
       poster: "assets/img/eventposters/meishuu.jpg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-      detailsPdf: "/assets/production-meishu-details.pdf",
     },
     {
       poster: "assets/img/eventposters/ADVETHON.png",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-      detailsPdf: "/assets/adventhon-details.pdf",
     },
     {
       poster: "assets/img/eventposters/ADVETHON.png",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-      detailsPdf: "/assets/docs/Robo-Evade.pdf",
     },
     {
       poster: "assets/img/eventposters/structure.jpg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-      detailsPdf: "assets/docs/Stick it structure it.pdf",
     },
     {
       poster: "assets/img/eventposters/deconstruction.jpg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-      detailsPdf: "assets/docs/Deconstructing design.pdf",
     },
     {
       poster: "assets/img/eventposters/workshop1.jpg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-      detailsPdf: "/assets/production-meishu-details.pdf",
     },
     {
-      poster: "assets/img/eventposters/PAPER PRESENTATION.jpg",
+      poster: "assets/img/eventposters/PAPER PRESENTATION.jpeg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-      detailsPdf: "/assets/docs/Paper presentation.pdf",
     },
   ];
 

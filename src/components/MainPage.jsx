@@ -3,7 +3,6 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import ParticlesComponent from "./particles";
 import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import SplashCursor from './SplashCursor';
-
 const MainPage = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -11,7 +10,7 @@ const MainPage = () => {
     damping: 30,
     restDelta: 0.001
   });
-
+ 
   useEffect(() => {
     // Any additional setup can go here
   }, []);
@@ -132,6 +131,7 @@ const MainPage = () => {
         </div>
       </div>
 
+      
       {/* About Section */}
       <div id="about" className="relative min-h-screen overflow-hidden">
         <ParticlesComponent />

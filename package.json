@@ -15,12 +15,14 @@
     "framer-motion": "^11.12.0",
     "gsap": "^3.12.7",
     "lucide-react": "^0.462.0",
+    "ogl": "^1.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.28.0",
     "react-scroll": "^1.9.0",
     "react-tsparticles": "^2.12.2",
+    "styled-components": "^6.1.14",
     "tsparticles": "^3.7.1"
   },
   "devDependencies": {
