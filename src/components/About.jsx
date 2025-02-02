@@ -68,7 +68,7 @@ const About = () => {
               <h2 className="text-2xl sm:text-3xl font-semibold text-green-700 mb-4">
                 What is Prodothon?
               </h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-white leading-relaxed text-lg">
                 Prodothon is an Inter-College Festival at the Department of Production
                 Engineering, PSG College of Technology. Spanning two days, this event
                 is tailored for undergraduate students from the Mechanical Stream.
@@ -108,7 +108,7 @@ const About = () => {
               <h2 className="text-2xl sm:text-3xl font-semibold text-amber-700 mb-4">
                 Our Mission
               </h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-white leading-relaxed text-lg">
                 To foster innovation, technical proficiency, and collaborative learning
                 among engineering students by providing a competitive platform that
                 emphasizes cutting-edge technologies, practical knowledge,
@@ -144,7 +144,7 @@ const About = () => {
               <h2 className="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4">
                 Our Vision
               </h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-white  leading-relaxed text-lg">
                 To become a flagship event that inspires the next generation of engineers
                 to embrace excellence in manufacturing and mechanical engineering,
                 bridging the gap between academic learning and industry practices while
