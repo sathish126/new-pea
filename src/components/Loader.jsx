@@ -4,11 +4,19 @@ import styled from 'styled-components';
 const Loader = () => {
   return (
     <StyledWrapper>
+      {/* Spinner */}
       <div className="spinner" />
-      <h1 className="title font-goodBrush">PRODOTHON'25</h1>
+      {/* Video */}
+      <video
+        src="/assets/img/IMG_8014.mp4"
+        autoPlay
+        loop
+        muted
+        className="promo-video"
+      />
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   position: fixed;
@@ -17,10 +25,10 @@ const StyledWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  background: white; /* White background */
   z-index: 9999;
 
   .spinner {
@@ -48,13 +56,17 @@ const StyledWrapper = styled.div`
     transform: rotate(45deg);
   }
 
-  .title {
-    margin-top: 20px;
-    font-size: 24px;
-    font-goodBrush;
-    font-weight: bold ;
-    color: #004dff;
-    animation: colorShift 3s infinite alternate;
+  /* Style for the video */
+  .promo-video {
+    margin-top: 10px; /* Reduced spacing between spinner and video */
+    width: 80vw; /* Responsive width based on viewport width */
+    max-width: 1000px; /* Maximum size for large screens */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the video behaves as a block element */
+    margin-bottom: 0; /* Remove any bottom margin */
+    padding: 0; /* Remove any padding */
+    outline: none; /* Remove any focus outline */
+    border: none; /* Explicitly remove borders */
   }
 
   @keyframes spinner-rotate {
@@ -63,15 +75,26 @@ const StyledWrapper = styled.div`
     }
   }
 
-  @keyframes colorShift {
-    0% {
-      color: #004dff;
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .spinner {
+      width: 20vw;
+      height: 20vw;
     }
-    50% {
-      color: #ff4500;
+
+    .promo-video {
+      width: 90vw; /* Use more of the screen width on smaller devices */
     }
-    100% {
-      color: #32cd32;
+  }
+
+  @media (max-width: 480px) {
+    .spinner {
+      width: 25vw;
+      height: 25vw;
+    }
+
+    .promo-video {
+      width: 95vw; /* Use almost the full screen width on very small devices */
     }
   }
 `;
