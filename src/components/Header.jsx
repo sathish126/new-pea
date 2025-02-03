@@ -98,7 +98,7 @@ const Header = () => {
         <div className="flex flex-col items-end space-y-1">
           <div className="flex items-center space-x-2">
             <img
-              src="/assets/PEA_logo.png"
+              src="assets/PEA_logo.png"
               alt="PEA Logo"
               className="w-8 h-8 hover:scale-110 transition-all duration-300"
             />

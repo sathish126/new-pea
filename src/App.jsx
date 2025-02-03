@@ -17,7 +17,7 @@ export default function App() {
     // Simulating a delay before hiding the loader
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // 2 seconds
+    }, 2000); // 2 seconds
 
     return () => clearTimeout(timer); // Cleanup timeout on unmount
   }, []);
