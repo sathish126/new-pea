@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import ParticlesComponent from "./particles";
 import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import SplashCursor from './SplashCursor';
+
 const MainPage = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -10,10 +11,21 @@ const MainPage = () => {
     damping: 30,
     restDelta: 0.001
   });
- 
+
   useEffect(() => {
     // Any additional setup can go here
   }, []);
+
+  // Data for horizontal cards
+  const cards = [
+    { id: 1, title: "The Production Meishu", image: "assets/img/main/meisu.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+    { id: 2, title: "ADVENTHON", image: "assets/img/main/adv.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+    { id: 3, title: "Paper Presentation", image: "assets/img/main/pp.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+    { id: 4, title: "Workshop (Entrepreneurship)", image: "assets/img/main/workshop.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+    { id: 5, title: "Robo-Evade", image: "assets/img/main/robo.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+    { id: 6, title: "STICK IT! STRUCTURE IT!", image: "assets/img/main/structure.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+    { id: 7, title: "DECONSTRUCTING DESIGN: A Reverse Engineering Showdown", image: "assets/img/main/decon.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+  ];
 
   return (
     <main className="relative min-h-screen overflow-hidden flex flex-col justify-between">
@@ -131,7 +143,30 @@ const MainPage = () => {
         </div>
       </div>
 
-      
+      {/* Horizontal Cards Section */}
+      <div className="relative z-10 py-16 bg-transparent">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl font-romanSD text-center mb-12 bg-clip-text text-transparent 
+            bg-gradient-to-r from-purple-500 to-pink-500 animate-gradient-x tracking-tight">
+            Events
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {cards.map((card) => (
+              <div key={card.id} className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 p-6 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all">
+                <img src={card.image} alt={card.title} className="w-full h-48 object-cover rounded-2xl mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-4">{card.title}</h3>
+                <a
+                  href={card.link}
+                  className="flex items-center justify-center px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-purple-500/50"
+                >
+                  Register Now
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* About Section */}
       <div id="about" className="relative min-h-screen overflow-hidden">
         <ParticlesComponent />

@@ -53,7 +53,7 @@ const EventCard = ({ poster, registrationLink }) => {
 const EventDashboard = () => {
   const events = [
     {
-      poster: "assets/img/eventposters/meishuu.jpg",
+      poster: "assets/img/eventposters/meishuu.png",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
     {
@@ -61,7 +61,7 @@ const EventDashboard = () => {
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
     {
-      poster: "assets/img/eventposters/ADVETHON.png",
+      poster: "assets/img/eventposters/Robo Evade.jpg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
     {
@@ -69,11 +69,11 @@ const EventDashboard = () => {
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
     {
-      poster: "assets/img/eventposters/deconstruction.jpg",
+      poster: "assets/img/eventposters/deconstruction.jpeg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
     {
-      poster: "assets/img/eventposters/workshop1.jpg",
+      poster: "assets/img/eventposters/workshop1.jpeg",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
     {
@@ -93,7 +93,7 @@ const EventDashboard = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8"
         >
           {events.map((event, index) => (
             <EventCard key={index} {...event} />

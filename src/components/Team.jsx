@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import ParticlesComponent from './particles';
 
 // Combined data for Production Engineering Association (PEA) and Society of Manufacturing Engineers (SME)
@@ -26,29 +26,30 @@ const combinedMembers = [
 
   // Junior Executives
   { name: "SUKANTH N R", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/sukanth.jpg", linkedin: "https://linkedin.com/in/juniorexecutive1" },
-  { name: "DEEPIKA S P", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Dheepika.jpg", linkedin: "https://linkedin.com/in/juniorexecutive2" },
+  { name: "DEEPIKA S P", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Dheepika.jpg", linkedin: "https://www.linkedin.com/in/dheepika-s-p-10a9b2248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
   { name: "NHARGUNA NANGAI M B", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/NN.jpeg", linkedin: "https://www.linkedin.com/in/nharguna-nangai-m-b-677b20298/" },
   { name: "NIMESHA S", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Nimesha.jpg", linkedin: "https://www.linkedin.com/in/nimesha20067872006787?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
   { name: "AISHAA NIHAR Z", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/aisha.jpeg", linkedin: "https://www.linkedin.com/in/aishaa-nihar-z-7b83a4276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
   { name: "KANCIA ROSLIN MARY", organization: "PEA", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Kancia.jpg", linkedin: "https://linkedin.com/in/juniorexecutive6" },
   { name: "RITHIKA G", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/rithika.jpg", linkedin: "https://www.linkedin.com/in/rithika-govindaraj08?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-  { name: "VINOTHINI D", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Vinothini.jpg", linkedin: "https://linkedin.com/in/smejuniorexecutive2" },
+  { name: "VINOTHINI D", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Vinothini.jpg", linkedin: "https://www.linkedin.com/in/vinothini-durairaj-393b62253/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
   { name: "KRISITHA J S", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Krisitha.jpg", linkedin: "https://www.linkedin.com/in/krisitha-j-s-b342562b3" },
   { name: "MOHAMED VASEEM J", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/vaseem.jpeg", linkedin: "https://www.linkedin.com/in/mohamed-vaseem-5bb31b28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-  { name: "MANJUSWETHA S V", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Manjuswetha.jpg", linkedin: "https://www.linkedin.com/in/manjuswetha-s-v-b981a42b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+  { name: "MANJUSWETHA S V", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/Manjuswetha.jpeg", linkedin: "https://www.linkedin.com/in/manjuswetha-s-v-b981a42b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
   { name: "KISHORE KANΝΑΝ Β", organization: "SME", role: "Junior Executive", image: "/assets/img/Team/JUNIOR_EXE/kishorekannan.jpg", linkedin: "https://www.linkedin.com/in/kishore04k?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
 
   // Common volunteers for both organizations
-  { name: "THIRUSURIYAA S U", role: "Volunteer", image: "/assets/assets/img/volunteer1.jpg", linkedin: "https://linkedin.com/in/volunteer1" },
-  { name: "N MUGILAN", role: "Volunteer", image: "/assets/img/volunteer2.jpg", linkedin: "https://linkedin.com/in/volunteer2" },
+  
   { name: "GIRIDHARAN T", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/giri.jpg", linkedin: "https://linkedin.com/in/volunteer3" },
   { name: "SABARISAN E",  role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/sabari.jpeg", linkedin: "https://linkedin.com/in/volunteer4" },
   { name: "ADHIYAN KHAN A", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/adhiyan.jpg", linkedin: "https://linkedin.com/in/volunteer5" },
   { name: "NEKA S", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/Neka.jpg", linkedin: "https://www.linkedin.com/in/neka-s-a81071325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-  { name: "RIVALIN R",  role: "Volunteer", image: "/assets/img/volunteer7.jpg", linkedin: "https://linkedin.com/in/volunteer7" },
+  { name: "RIVALIN R",  role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/rivalin.jpeg", linkedin: "https://linkedin.com/in/volunteer7" },
   { name: "SRIVARDHNY D S", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/sri.jpeg", linkedin: "https://linkedin.com/in/volunteer8" },
   { name: "ADITHYA R B", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/adhithya.jpeg", linkedin: "https://linkedin.com/in/volunteer9" },
   { name: "SHARVESH D", role: "Volunteer", image: "/assets/img/volunteer10.jpg", linkedin: "https://linkedin.com/in/volunteer10" },
+  { name: "THIRUSURIYAA S U", role: "Volunteer", image: "/assets/assets/img/volunteer1.jpg", linkedin: "https://linkedin.com/in/volunteer1" },
+  { name: "N MUGILAN", role: "Volunteer", image: "/assets/img/volunteer2.jpg", linkedin: "https://linkedin.com/in/volunteer2" },
 ];
 
 // LinkedIn SVG Icon
@@ -59,6 +60,9 @@ const LinkedInIcon = () => (
 );
 
 const Team = () => {
+  const { scrollYProgress } = useScroll(); // Track scroll progress
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 }); // Animate progress bar
+
   const groupByRole = (members) => {
     return members.reduce((groups, member) => {
       if (!groups[member.role]) {
@@ -73,6 +77,12 @@ const Team = () => {
 
   return (
     <main className="relative min-h-screen overflow-hidden">
+      {/* Scroll Progress Bar */}
+      <motion.div
+        style={{ scaleX }}
+        className="fixed top-0 left-0 right-0 h-2 bg-gradient-to-r from-purple-600 to-blue-500 origin-left z-50"
+      />
+
       {/* Particles background */}
       <ParticlesComponent />
 
