@@ -75,7 +75,7 @@ const Header = () => {
       </aside>
 
       {/* Desktop Header */}
-      <header className="hidden lg:flex fixed top-0 left-0 right-0 z-30 items-center justify-between px-1 py-1 bg-gray-100 shadow-md">
+      <header className="hidden lg:flex fixed top-0 left-0 right-0 z-30  h-20 items-center justify-between px-1 py-1 bg-gray-100 shadow-md">
         <div className="flex items-center space-x-4">
           <img
             src="/assets/psg_logo.png"
@@ -90,9 +90,9 @@ const Header = () => {
         </div>
         <Link to="/" className="flex justify-center items-center">
           <img
-            src="/assets/center_logo.png"
+            src="/assets/prodo.png"
             alt="Logo"
-            className="w-16 h-16 hover:scale-110 transition-all duration-300"
+            className="w-66 h-auto hover:scale-110 transition-all duration-300"
           />
         </Link>
         <div className="flex flex-col items-end space-y-1">
