@@ -310,7 +310,7 @@ const MainPage = () => {
                     href="mailto:prod@psg.com"
                     className="text-blue-300 font-serif hover:text-blue-100 transition-colors"
                   >
-                    prod@psg.com
+                    pea.prod@psgtech.ac.in
                   </a>
                 </div>
 
