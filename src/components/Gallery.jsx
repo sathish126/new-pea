@@ -20,12 +20,12 @@ const Gallery = () => {
     {
       "id": 1,
       "src": "assets/img/gallery/nan1.jpeg",
-      "title": "Prodothon'24"
+      "title": "Inaguration"
     },
     {
       "id": 1,
       "src": "assets/img/gallery/nan2.jpeg",
-      "title": "Prodothon'24"
+      "title": "Inaguration"
     },
           {
         "id": 1,
