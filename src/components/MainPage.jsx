@@ -381,6 +381,32 @@ const MainPage = () => {
           </div>
         </div>
       </div>
+      <footer className="bg-transparent text-white py-6 animate-colorShift font-extrabold">
+        <div className="container mx-auto flex items-center justify-center px-4 space-x-4">
+          <p className="text-sm ">Digital Sponsor TheFixers (Sathish P)</p>
+          <div className="flex items-center space-x-4">
+            {/* Instagram Icon */}
+            <a
+              href="https://www.instagram.com/sathish__126_/profilecard/?igsh=MTlxcjNmZzgxMTFwZA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition"
+            >
+              <Instagram size={20} />
+            </a>
+            {/* LinkedIn Icon */}
+            <a
+              href="https://www.instagram.com/sathish__126_/profilecard/?igsh=MTlxcjNmZzgxMTFwZA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition"
+            >
+              <Linkedin size={20} />
+            </a>
+          </div>
+        </div>
+      </footer>
+      
     </main>
   );
 };
