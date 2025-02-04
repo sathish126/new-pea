@@ -17,7 +17,17 @@ const Gallery = () => {
   });
 
   const galleryImages = [
-      {
+    {
+      "id": 1,
+      "src": "assets/img/gallery/nan1.jpeg",
+      "title": "Prodothon'24"
+    },
+    {
+      "id": 1,
+      "src": "assets/img/gallery/nan2.jpeg",
+      "title": "Prodothon'24"
+    },
+          {
         "id": 1,
         "src": "assets/img/gallery/prodthon24/1.jpeg",
         "title": "Prodothon'24"

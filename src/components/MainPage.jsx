@@ -21,7 +21,7 @@ const MainPage = () => {
     { id: 1, title: "The Production Meishu", image: "assets/img/main/meisu.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
     { id: 2, title: "ADVENTHON", image: "assets/img/main/adv.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
     { id: 3, title: "Paper Presentation", image: "assets/img/main/pp.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
-    { id: 4, title: "Workshop (Entrepreneurship)", image: "assets/img/main/workshop.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
+    { id: 4, title: "Workshop (PLM)", image: "assets/img/main/workshop.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
     { id: 5, title: "Robo-Evade", image: "assets/img/main/robo.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
     { id: 6, title: "STICK IT! STRUCTURE IT!", image: "assets/img/main/structure.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
     { id: 7, title: "DECONSTRUCTING DESIGN: A Reverse Engineering Showdown", image: "assets/img/main/decon.png", link: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form/register" },
