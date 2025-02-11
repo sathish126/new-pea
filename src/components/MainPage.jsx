@@ -89,7 +89,7 @@ const MainPage = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
               <a
-                href="/path-to-your-brochure.pdf"
+                href="assets/docs/PRODOTHON'25 Brochure.pdf"
                 download="Event_Brochure.pdf"
                 className="relative flex items-center justify-center text-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-purple-500/50"
               >
@@ -322,7 +322,7 @@ const MainPage = () => {
                     </div>
                     <div>
                       <p className="text-gray-200 font-serif">
-                        Arun Secretary-SME: +91 9876543210
+                        Arun Secretary-SME: +91 9003585358
                       </p>
                     </div>
                   </div>
@@ -342,7 +342,7 @@ const MainPage = () => {
               {/* Social Media Links */}
               <div className="mt-10 flex justify-center space-x-8">
                 <a
-                  href="https://instagram.com/psg_cet"
+                  href="https://www.instagram.com/pea_sme?igsh=Y3dvNHRzMzd2d2l5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-pink-400 hover:text-pink-300 transition-all"
@@ -350,7 +350,7 @@ const MainPage = () => {
                   <Instagram size={36} />
                 </a>
                 <a
-                  href="https://linkedin.com/school/psg-college-of-technology"
+                  href="https://www.linkedin.com/company/pea-sme-psg-tech/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-all"

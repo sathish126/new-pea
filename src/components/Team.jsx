@@ -48,7 +48,7 @@ const combinedMembers = [
   { name: "SRIVARDHNY D S", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/sri.jpeg", linkedin: "https://linkedin.com/in/volunteer8" },
   { name: "ADITHYA R B", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/adhithya.jpeg", linkedin: "https://linkedin.com/in/volunteer9" },
   { name: "SHARVESH D", role: "Volunteer", image: "/assets/img/volunteer10.jpg", linkedin: "https://linkedin.com/in/volunteer10" },
-  { name: "THIRUSURIYAA S U", role: "Volunteer", image: "/assets/assets/img/volunteer1.jpg", linkedin: "https://linkedin.com/in/volunteer1" },
+  { name: "THIRUSURIYAA S U", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/", linkedin: "https://linkedin.com/in/volunteer1" },
   { name: "N MUGILAN", role: "Volunteer", image: "/assets/img/volunteer2.jpg", linkedin: "https://linkedin.com/in/volunteer2" },
 ];
 
