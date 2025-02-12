@@ -105,14 +105,16 @@ const About = () => {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-amber-700 mb-4">
-                Our Mission
+              <h2 className="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4">
+                Our Vision
               </h2>
-              <p className="text-white leading-relaxed text-lg">
-                To foster innovation, technical proficiency, and collaborative learning
-                among engineering students by providing a competitive platform that
-                emphasizes cutting-edge technologies, practical knowledge,
-                industry-relevant skills, and teamwork.
+              <p className="text-white  leading-relaxed text-lg">
+                To become a flagship event that inspires the next generation of engineers
+                to embrace excellence in manufacturing and mechanical engineering,
+                bridging the gap between academic learning and industry practices while
+                promoting sustainable and innovative solutions. We aim to engage in
+                activities guided by values and ethics with a sense of responsibility
+                to society and the environment.
               </p>
             </div>
           </motion.section>
@@ -140,17 +142,16 @@ const About = () => {
                 />
               </svg>
             </div>
+            
             <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4">
-                Our Vision
+              <h2 className="text-2xl sm:text-3xl font-semibold text-amber-700 mb-4">
+                Our Mission
               </h2>
-              <p className="text-white  leading-relaxed text-lg">
-                To become a flagship event that inspires the next generation of engineers
-                to embrace excellence in manufacturing and mechanical engineering,
-                bridging the gap between academic learning and industry practices while
-                promoting sustainable and innovative solutions. We aim to engage in
-                activities guided by values and ethics with a sense of responsibility
-                to society and the environment.
+              <p className="text-white leading-relaxed text-lg">
+                To foster innovation, technical proficiency, and collaborative learning
+                among engineering students by providing a competitive platform that
+                emphasizes cutting-edge technologies, practical knowledge,
+                industry-relevant skills, and teamwork.
               </p>
             </div>
           </motion.section>

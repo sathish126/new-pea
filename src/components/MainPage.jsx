@@ -229,15 +229,18 @@ const MainPage = () => {
                   />
                 </svg>
               </div>
+             
               <div>
-                <h2 className="text-2xl sm:text-3xl font-semibold text-amber-700 mb-4">
-                  Our Mission
+                <h2 className="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4">
+                  Our Vision
                 </h2>
                 <p className="text-white leading-relaxed text-lg">
-                  To foster innovation, technical proficiency, and collaborative learning
-                  among engineering students by providing a competitive platform that
-                  emphasizes cutting-edge technologies, practical knowledge,
-                  industry-relevant skills, and teamwork.
+                  To become a flagship event that inspires the next generation of engineers
+                  to embrace excellence in manufacturing and mechanical engineering,
+                  bridging the gap between academic learning and industry practices while
+                  promoting sustainable and innovative solutions. We aim to engage in
+                  activities guided by values and ethics with a sense of responsibility
+                  to society and the environment.
                 </p>
               </div>
             </section>
@@ -259,20 +262,19 @@ const MainPage = () => {
                     d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.768-.231-1.48-.631-2.202M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.768.231-1.48.631-2.202M10 12a4 4 0 11-8 0 4 4 0 018 0zm4 4a4 4 0 100-8 4 4 0 000 8z"
                   />
                 </svg>
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4">
-                  Our Vision
+                
+              </div> <div>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-amber-700 mb-4">
+                  Our Mission
                 </h2>
                 <p className="text-white leading-relaxed text-lg">
-                  To become a flagship event that inspires the next generation of engineers
-                  to embrace excellence in manufacturing and mechanical engineering,
-                  bridging the gap between academic learning and industry practices while
-                  promoting sustainable and innovative solutions. We aim to engage in
-                  activities guided by values and ethics with a sense of responsibility
-                  to society and the environment.
+                  To foster innovation, technical proficiency, and collaborative learning
+                  among engineering students by providing a competitive platform that
+                  emphasizes cutting-edge technologies, practical knowledge,
+                  industry-relevant skills, and teamwork.
                 </p>
               </div>
+              
             </section>
           </div>
         </div>
@@ -281,7 +283,7 @@ const MainPage = () => {
       {/* Contact Section */}
       <div id="contact" className="relative min-h-screen overflow-hidden bg-transparent">
         <ParticlesComponent />
-        <div className="relative z-10 container mx-auto px-4 py-36">
+        <div className="relative z-10 container mx-auto px-4 py-32">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
             {/* Contact Information Section */}
             <div className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 p-8 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all">
@@ -294,7 +296,7 @@ const MainPage = () => {
                   <div>
                     <MapPin className="text-pink-400 flex-shrink-0" size={28} />
                   </div>
-                  <p className="text-gray-200 font-serif">
+                  <p className="text-gray-200 font-medium">
                     Department of Production Engineering,<br />
                     PSG College of Technology,
                     Coimbatore,<br /> Tamil Nadu, India
@@ -304,11 +306,11 @@ const MainPage = () => {
                 {/* Email */}
                 <div className="flex items-center space-x-4">
                   <div>
-                    <Mail className="text-red-400 font-serif flex-shrink-0" size={28} />
+                    <Mail className="text-red-400 font-medium flex-shrink-0" size={28} />
                   </div>
                   <a
-                    href="mailto:prod@psg.com"
-                    className="text-blue-300 font-serif hover:text-blue-100 transition-colors"
+                    href="mailto:pea.prod@psgtech.ac.in"
+                    className="text-blue-300 font-medium hover:text-blue-100 transition-colors"
                   >
                     pea.prod@psgtech.ac.in
                   </a>
@@ -321,8 +323,9 @@ const MainPage = () => {
                       <Phone className="text-green-400 flex-shrink-0" size={28} />
                     </div>
                     <div>
-                      <p className="text-gray-200 font-serif">
-                        Arun Secretary-SME: +91 9003585358
+                      <p className="text-gray-200 font-medium">
+                      Nitis Prabu M : +91 97919 47147
+                        
                       </p>
                     </div>
                   </div>
@@ -331,8 +334,8 @@ const MainPage = () => {
                       <Phone className="text-green-400 flex-shrink-0" size={28} />
                     </div>
                     <div>
-                      <p className="text-gray-200 font-serif">
-                        Nitish Secretary-PEA: +91 9876543210
+                      <p className="text-gray-200 font-medium">
+                      Arun K : +91 90035 85358
                       </p>
                     </div>
                   </div>

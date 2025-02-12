@@ -14,12 +14,14 @@ const EventCard = ({ poster, registrationLink }) => {
   };
 
   return (
+    
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
     >
+      
       {/* Poster */}
       <motion.div
         className="cursor-pointer relative"
@@ -83,12 +85,50 @@ const EventDashboard = () => {
   ];
 
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden z-10">
+        <div className="relative z-10 container mx-auto px-4 py-48 pt-36">
       {/* Particles background */}
       <ParticlesComponent />
+      <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 1 }}
+      className="bg-gradient-to-br from-purple-800/70 to-blue-800/70 p-4 sm:p-8 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all mb-6 sm:mb-12 max-w-3xl mx-auto"
+    >
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-romanSD text-center mb-1 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 animate-gradient-x">
+        REGISTRATION FEE DETAILS
+      </h2>
+      <div className="flex justify-center w-full">
+        <div className="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 overflow-x-auto">
+          <table className="w-full border-collapse border text-center border-purple-500/20 mt-4">
+            <thead>
+              <tr className="bg-purple-600/50">
+                <th className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-base sm:text-lg">Category</th>
+                <th className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-base sm:text-lg">Fee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-sm sm:text-base">PSG TECH</td>
+                <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-sm sm:text-base">NIL</td>
+              </tr>
+              <tr>
+                <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-sm sm:text-base">PSG I-Tech</td>
+                <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-sm sm:text-base">₹100</td>
+              </tr>
+              <tr>
+                <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-sm sm:text-base">Other Colleges</td>
+                <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-serif text-sm sm:text-base">₹200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </motion.div>
+      
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 py-48 pt-36">
+      
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -99,6 +139,7 @@ const EventDashboard = () => {
             <EventCard key={index} {...event} />
           ))}
         </motion.div>
+        
       </div>
     </main>
   );

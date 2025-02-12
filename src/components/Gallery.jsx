@@ -112,11 +112,7 @@ const Gallery = () => {
         "src": "assets/img/gallery/prodthon24/17.jpeg",
         "title": "Prodothon'24"
       },
-      {
-        "id": 18,
-        "src": "/assets/img/gallery/Tech talk Start Up Syndrome/IMG_7546.jpeg",
-        "title": "Tech Talk: Start Up Syndrome"
-      },
+      
       {
         "id": 19,
         "src": "/assets/img/gallery/Tech talk Start Up Syndrome/IMG_7591.jpeg",

@@ -94,10 +94,11 @@ const Header = () => {
                 className="w-10 h-10"
               />
             </div>
-            <p className="text-sm text-gray-400">
-              Department of Production Engineering
+            <p className="text-sm text-gray-400">PSG College of Technology
+              
               <br />
-              PSG College of Technology
+              
+              Department of Production Engineering
             </p>
           </div>
         </div>
@@ -113,9 +114,9 @@ const Header = () => {
               className="w-12 h-12 hover:scale-110 transition-all duration-300"
             />
             <div className="text-xl font-bold tracking-wide">
-              <span className="text-yellow-500">Department of Production Engineering</span>
+              <span className="text-yellow-500">PSG College of Technology</span>
               <br />
-              PSG College of Technology
+              Department of Production Engineering
             </div>
           </div>
           

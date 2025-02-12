@@ -24,7 +24,7 @@ const Contact = () => {
                 <div>
                   <MapPin className="text-pink-400 flex-shrink-0" size={28} />
                 </div>
-                <p className="text-gray-200 font-serif">
+                <p className="text-gray-200 font-medium">
                   Department of Production Engineering,<br />
                   PSG College of Technology,
                   Peelamedu,<br />Coimbatore - 641004<br /> Tamil Nadu, India.
@@ -33,40 +33,41 @@ const Contact = () => {
 
               {/* Email */}
               <div className="flex items-center space-x-4">
-                <div>
-                  <Mail className="text-red-400 font-serif flex-shrink-0" size={28} />
-                </div>
-                <a
-                  href="mailto:prod@psg.com"
-                  className="text-blue-300 font-serif hover:text-blue-100 transition-colors"
-                >
-                  pea.prod@psgtech.ac.in
-                </a>
-              </div>
+                                <div>
+                                  <Mail className="text-red-400 font-medium flex-shrink-0" size={28} />
+                                </div>
+                                <a
+                                  href="mailto:pea.prod@psgtech.ac.in"
+                                  className="text-blue-300 font-medium hover:text-blue-100 transition-colors"
+                                >
+                                  pea.prod@psgtech.ac.in
+                                </a>
+                              </div>
 
               {/* Phone Numbers */}
               <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div>
-                    <Phone className="text-green-400 flex-shrink-0" size={28} />
-                  </div>
-                  <div>
-                    <p className="text-gray-200 font-serif">
-                      ARUN K : +91 9003585358
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div>
-                    <Phone className="text-green-400 flex-shrink-0" size={28} />
-                  </div>
-                  <div>
-                    <p className="text-gray-200 font-serif">
-                      NITIS PRABU M : +91 9791947147
-                    </p>
-                  </div>
-                </div>
-              </div>
+                                <div className="flex items-center space-x-4">
+                                  <div>
+                                    <Phone className="text-green-400 flex-shrink-0" size={28} />
+                                  </div>
+                                  <div>
+                                    <p className="text-gray-200 font-medium">
+                                    Nitis Prabu M : +91 97919 47147
+                                      
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="flex items-center space-x-4">
+                                  <div>
+                                    <Phone className="text-green-400 flex-shrink-0" size={28} />
+                                  </div>
+                                  <div>
+                                    <p className="text-gray-200 font-medium">
+                                    Arun K : +91 90035 85358
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
             </div>
 
             {/* Social Media Links */}
