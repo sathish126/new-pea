@@ -188,16 +188,6 @@ const Gallery = () => {
         "title": "RPL"
       },
       {
-        "id": 33,
-        "src": "assets/img/gallery/Future of Manufacturing/3.jpeg",
-        "title": "Future of Manufacturing"
-      },
-      {
-        "id": 34,
-        "src": "assets/img/gallery/FUTURE OF PRODUCTION ENGINEERING/3.jpeg",
-        "title": "Future of Production Engineering"
-      },
-      {
         "id": 35,
         "src": "assets/img/gallery/Lean-O-Flex/1.jpg",
         "title": "Lean-O-Flex"
@@ -366,4 +356,4 @@ const Gallery = () => {
     );
   };
   
-  export default Gallery;
+  export default Gallery;                                                                                 
