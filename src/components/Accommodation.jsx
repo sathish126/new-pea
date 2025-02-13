@@ -55,6 +55,7 @@ const Accommodation = () => {
             <li>Participants can pay their accommodation fees while lodging (only cash is accepted).</li>
             <li>Participants should follow the hostel rules and regulations strictly.</li>
             <li>All students must carry a valid government ID card.</li>
+            <li>Participants should follow the Hostel rules and regulations  strictly.</li>
           </ul>
         </motion.div>
 
@@ -78,17 +79,74 @@ const Accommodation = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">3 sharing room + Food - ₹400 per day</td>
-                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">Dormitory room (8 sharing) + Food + Bed - ₹300 per day</td>
+                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">Food + 3 sharing room(common bath) - ₹400 / day</td>
+                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">Food + 2 sharing room (common bath) - ₹400 / day</td>
                 </tr>
                 <tr>
-                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">Dormitory room (8 sharing) + Food - ₹200 per day</td>
-                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">Dormitory room (8 sharing) + Food - ₹250 per day</td>
+                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">3 sharing room(common bath) - ₹250 / day</td>
+                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">Food + 3 sharin groom (attached bath) - ₹750 / day</td>
+                </tr>
+                <tr>
+                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">Dormitory room (8 sharing) - ₹50 / day</td>
+                  <td className="border border-purple-500/20 p-2 sm:p-4 text-gray-200 font-medium">-</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </motion.div>
+        {/* Hostel Rules Section */}
+<motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+  className="bg-gradient-to-br from-purple-800/70 to-blue-800/70 p-6 sm:p-8 rounded-3xl shadow-2xl border border-purple-500/20 backdrop-blur-lg hover:shadow-purple-500/40 transition-all mb-8 sm:mb-12"
+>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-romanSD text-center mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 animate-gradient-x">
+    HOSTEL RULES AND REGULATIONS
+  </h2>
+  <div className="space-y-4">
+    <div className="grid grid-cols-1 gap-4">
+      {[
+        {
+          id: 1,
+          rule: "Participants should not enter into other blocks apart from the allotted place."
+        },
+        {
+          id: 2,
+          rule: "Participants are asked to take food in their respective mess only."
+        },
+        {
+          id: 3,
+          rule: "Participants are asked to contact the volunteers for any sort of help. They should not take their own actions."
+        },
+        {
+          id: 4,
+          rule: "Participants are asked to cooperate with block/mess supervisors in any kind of ID check."
+        },
+        {
+          id: 5,
+          rule: "Participants should not make any noise during the sleeping hours."
+        },
+        {
+          id: 6,
+          rule: "Participants should not enter into the hostel without registration in the hostel office. They should contact the allotted volunteers at the time of arrival at the hostel."
+        },
+        {
+          id: 7,
+          rule: "Participants should not damage any property given to them."
+        }
+      ].map((item) => (
+        <div
+          key={item.id}
+          className="flex items-start gap-4 p-4 bg-purple-600/20 rounded-lg border border-purple-500/30 hover:border-purple-500/50 transition-all"
+        >
+         
+          <p className="text-gray-200 font-medium leading-relaxed">{item.rule}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</motion.div>
 
         {/* Payment Guidelines Section */}
         <motion.div
