@@ -75,11 +75,10 @@ const EventDashboard = () => {
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
     {
-      poster: "assets/img/eventposters/workshop1.jpeg",
-      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
-    },
-    {
       poster: "assets/img/eventposters/PAPER PRESENTATION.jpeg",
+      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
+    },{
+      poster: "assets/img/eventposters/Workshop.png",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiC4E3es24rJCKtPy4MVe1_njBZXsPcy7iD1-VJGES9lZj3w/viewform?usp=send_form",
     },
   ];
