@@ -90,7 +90,7 @@ const MainPage = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
               <a
                 href="assets/docs/PRODOTHON'25 Brochure.pdf"
-                download="Event_Brochure.pdf"
+                download="PRODOTHON'25 Brochure.pdf"
                 className="relative flex items-center justify-center text-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transform hover:scale-105 transition-all duration-200 font-semibold text-lg shadow-xl hover:shadow-purple-500/50"
               >
                 <div className="flex items-center gap-2">
