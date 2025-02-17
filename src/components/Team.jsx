@@ -48,6 +48,11 @@ const combinedMembers = [
   { name: "SRIVARDHNY D S", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/sri.jpeg", linkedin: "https://linkedin.com/in/volunteer8" },
   { name: "ADITHYA R B", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/adhithya.jpeg", linkedin: "https://linkedin.com/in/volunteer9" },
   { name: "THIRUSURIYAA S U", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/surya.jpg", linkedin: "https://linkedin.com/in/volunteer1" },
+  { name: "MUGILAN N", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/mugilan.jpeg", linkedin: "https://linkedin.com/in/volunteer1" },
+  { name: "SHARVESH D", role: "Volunteer", image: "/assets/img/Team/VOLUNTEERS/sharwesh.jpeg", linkedin: "https://www.linkedin.com/in/sharvesh-desigan-b5011229a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+  
+  
+
 ];
 
 // LinkedIn SVG Icon

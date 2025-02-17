@@ -159,7 +159,7 @@ const Accommodation = () => {
             PAYMENT GUIDELINES
           </h2>
           <ul className="list-disc list-inside text-gray-200 font-medium space-y-2 sm:space-y-3 text-base sm:text-lg">
-            <li>Prior registration to any event is required through the shared Google form. On-spot registrations are not allowed.</li>
+            <li>Prior registration to any event is required; on-spot registrations will be considered.</li>
             <li>Registration fee must be paid to the mentioned bank account.</li>
             <li>Once the registration fee is paid, it is non-refundable.</li>
             <li>The transaction ID and the screenshot of the payment must be entered and uploaded in Google Forms.</li>
